@@ -293,7 +293,7 @@ export default function Home() {
                 <div className="space-y-4 rounded-3xl border border-emerald-900/10 bg-gradient-to-br from-emerald-50 to-white p-5 shadow-lg shadow-emerald-900/10 sm:p-7 lg:p-8">
                   <p className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">Ubicación</p>
                   <h2 className="font-serif text-2xl leading-tight text-emerald-950 sm:text-3xl lg:text-4xl">
-                    Donde la logística se encuentra con tu operación
+                    Dónde nos puedes encontrar
                   </h2>
                   <p className="text-sm leading-7 text-slate-600 sm:text-base">
                     Con cobertura logística en la zona, podemos atender distribución y servicio con tiempos eficientes y seguimiento continuo.
