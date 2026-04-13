@@ -21,7 +21,7 @@ const socialLinks = [
     },
     {
         name: "WhatsApp",
-        href: "https://wa.me/573000000000",
+        href: "https://wa.me/593981942383",
         icon: (
             <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden="true">
                 <path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.3-.7-1.5-.8s-.4-.1-.6.1-.6.8-.7 1-.3.2-.6 0a6.7 6.7 0 0 1-2-1.2 7.3 7.3 0 0 1-1.3-1.7c-.1-.3 0-.4.1-.6l.4-.5.2-.4c.1-.1 0-.3 0-.4s-.6-1.4-.8-1.9-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-1 2.2c0 1.3 1 2.6 1 2.8.2.2 2 3.2 4.9 4.3.7.3 1.3.5 1.8.6.8.2 1.5.1 2.1.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.2-.5-.3Z" />
@@ -79,9 +79,17 @@ export function Footer() {
                             <div className="rounded-2xl border border-white/12 bg-white/5 p-4">
                                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">Contacto</p>
                                 <div className="mt-3 space-y-1.5 text-sm leading-6 text-white/80">
-                                    <p>Teléfono: +57 300 000 0000</p>
-                                    <p>WhatsApp: +57 300 000 0000</p>
+                                    <p>Teléfono: +593 300 000 0000</p>
+                                    <p>WhatsApp: +593 98 194 2383</p>
                                     <p>Correo: comercial@omcatering.com</p>
+                                    <a
+                                        href="https://www.google.com/maps?q=-0.0827784463763237,-78.31104278564453&z=17&hl=es"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="mt-2 inline-flex text-amber-200 transition hover:text-amber-100"
+                                    >
+                                        Ver ubicación en Google Maps
+                                    </a>
                                 </div>
                             </div>
                         </div>

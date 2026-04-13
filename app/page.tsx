@@ -268,10 +268,10 @@ export default function Home() {
 
                 <div className="mt-8 space-y-3 rounded-3xl bg-white p-6 shadow-lg shadow-emerald-900/10">
                   <p className="text-sm text-slate-700">
-                    <span className="font-semibold text-emerald-900">Teléfono:</span> +57 300 000 0000
+                    <span className="font-semibold text-emerald-900">Teléfono:</span> +593 300 000 0000
                   </p>
                   <p className="text-sm text-slate-700">
-                    <span className="font-semibold text-emerald-900">WhatsApp:</span> +57 300 000 0000
+                    <span className="font-semibold text-emerald-900">WhatsApp:</span> +593 98 194 2383
                   </p>
                   <p className="text-sm text-slate-700">
                     <span className="font-semibold text-emerald-900">Ubicación:</span> Cobertura regional para operaciones industriales y corporativas.
@@ -281,6 +281,48 @@ export default function Home() {
 
               <Reveal delay={120}>
                 <ContactForm />
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        <section id="ubicacion" className="bg-white">
+          <div className={desktopSectionShell}>
+            <div className="grid gap-6 md:gap-8 lg:grid-cols-[1fr_1.15fr] lg:items-center">
+              <Reveal>
+                <div className="space-y-4 rounded-3xl border border-emerald-900/10 bg-gradient-to-br from-emerald-50 to-white p-5 shadow-lg shadow-emerald-900/10 sm:p-7 lg:p-8">
+                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">Ubicación</p>
+                  <h2 className="font-serif text-2xl leading-tight text-emerald-950 sm:text-3xl lg:text-4xl">
+                    Donde la logística se encuentra con tu operación
+                  </h2>
+                  <p className="text-sm leading-7 text-slate-600 sm:text-base">
+                    Con cobertura logística en la zona, podemos atender distribución y servicio con tiempos eficientes y seguimiento continuo.
+                  </p>
+                  <div className="grid gap-3 pt-2 text-sm text-slate-700">
+                    <p><span className="font-semibold text-emerald-900">Zona:</span> Quito - Guayllabamba, Simon Bolivar</p>
+                    <p><span className="font-semibold text-emerald-900">Disponibilidad:</span> Atención para operaciones empresariales e industriales</p>
+                  </div>
+                  <a
+                    href="https://www.google.com/maps?q=-0.0827784463763237,-78.31104278564453&z=17&hl=es"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-full items-center justify-center rounded-full bg-emerald-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800 sm:w-fit"
+                  >
+                    Abrir en Google Maps
+                  </a>
+                </div>
+              </Reveal>
+
+              <Reveal delay={120} className="overflow-hidden rounded-3xl border border-emerald-900/10 bg-white shadow-2xl shadow-emerald-950/10 sm:rounded-[2rem]">
+                <div className="relative aspect-[4/3] w-full sm:aspect-[16/10]">
+                  <iframe
+                    title="Ubicación de OM Catering"
+                    src="https://www.google.com/maps?q=-0.0827784463763237,-78.31104278564453&z=17&hl=es&output=embed"
+                    className="absolute inset-0 h-full w-full"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
               </Reveal>
             </div>
           </div>

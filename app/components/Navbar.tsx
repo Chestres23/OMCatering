@@ -10,6 +10,7 @@ const navItems = [
     { href: "#calidad", label: "Calidad" },
     { href: "#galeria", label: "Galería" },
     { href: "#contacto", label: "Contacto" },
+    { href: "#ubicacion", label: "Ubicación" },
 ];
 
 export function Navbar() {
