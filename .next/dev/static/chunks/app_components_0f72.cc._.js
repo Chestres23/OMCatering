@@ -8,23 +8,50 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$emailjs$2f$browser$2f$es$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/@emailjs/browser/es/index.js [app-client] (ecmascript) <locals>");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
 ;
+;
+const SERVICE_ID = "service_i4l1lb9";
+const TEMPLATE_ID = "template_4p1jpgb";
+const PUBLIC_KEY = "4Huj9Iefj8xyV9AcZ";
 function ContactForm() {
     _s();
+    const formRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const [status, setStatus] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("idle");
-    function handleSubmit(event) {
+    const [errorMsg, setErrorMsg] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [emailValue, setEmailValue] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    async function handleSubmit(event) {
         event.preventDefault();
-        const form = event.currentTarget;
-        const formData = new FormData(form);
-        // Reemplaza este flujo local por un POST a tu API cuando el backend esté listo.
-        console.log("Cotización solicitada", Object.fromEntries(formData.entries()));
-        setStatus("success");
-        form.reset();
+        if (!formRef.current) return;
+        setStatus("sending");
+        setErrorMsg("");
+        try {
+            // sendForm envía todos los campos del formulario usando sus atributos "name"
+            const result = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$emailjs$2f$browser$2f$es$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"].sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY);
+            console.log("EmailJS respuesta:", result.status, result.text);
+            setStatus("success");
+            formRef.current.reset();
+        } catch (error) {
+            // Extraer mensaje legible del error de EmailJS
+            let message = "Error desconocido";
+            if (error instanceof Error) {
+                message = error.message;
+            } else if (typeof error === "object" && error !== null && "text" in error) {
+                message = error.text;
+            } else if (typeof error === "string") {
+                message = error;
+            }
+            console.error("EmailJS error detallado:", JSON.stringify(error), message);
+            setErrorMsg(message);
+            setStatus("error");
+        }
     }
+    const isSending = status === "sending";
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
+        ref: formRef,
         onSubmit: handleSubmit,
         className: "space-y-4 rounded-3xl bg-white p-6 shadow-lg shadow-emerald-900/10",
         children: [
@@ -39,17 +66,18 @@ function ContactForm() {
                                 required: true,
                                 name: "nombre",
                                 type: "text",
-                                className: "mt-1 w-full rounded-xl border border-slate-200 px-3 py-2 text-slate-900 outline-none transition focus:border-emerald-600",
+                                disabled: isSending,
+                                className: "mt-1 w-full rounded-xl border border-slate-200 px-3 py-2 text-slate-900 outline-none transition focus:border-emerald-600 disabled:opacity-60",
                                 placeholder: "Tu nombre"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/ContactForm.tsx",
-                                lineNumber: 28,
+                                lineNumber: 59,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/ContactForm.tsx",
-                        lineNumber: 26,
+                        lineNumber: 57,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -60,23 +88,24 @@ function ContactForm() {
                                 required: true,
                                 name: "empresa",
                                 type: "text",
-                                className: "mt-1 w-full rounded-xl border border-slate-200 px-3 py-2 text-slate-900 outline-none transition focus:border-emerald-600",
+                                disabled: isSending,
+                                className: "mt-1 w-full rounded-xl border border-slate-200 px-3 py-2 text-slate-900 outline-none transition focus:border-emerald-600 disabled:opacity-60",
                                 placeholder: "Nombre de la empresa"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/ContactForm.tsx",
-                                lineNumber: 39,
+                                lineNumber: 71,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/ContactForm.tsx",
-                        lineNumber: 37,
+                        lineNumber: 69,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/ContactForm.tsx",
-                lineNumber: 25,
+                lineNumber: 56,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -85,19 +114,30 @@ function ContactForm() {
                     "Correo",
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                         required: true,
-                        name: "correo",
+                        name: "correo electrónico",
                         type: "email",
-                        className: "mt-1 w-full rounded-xl border border-slate-200 px-3 py-2 text-slate-900 outline-none transition focus:border-emerald-600",
+                        disabled: isSending,
+                        onChange: (e)=>setEmailValue(e.target.value),
+                        className: "mt-1 w-full rounded-xl border border-slate-200 px-3 py-2 text-slate-900 outline-none transition focus:border-emerald-600 disabled:opacity-60",
                         placeholder: "correo@empresa.com"
                     }, void 0, false, {
                         fileName: "[project]/app/components/ContactForm.tsx",
-                        lineNumber: 51,
+                        lineNumber: 84,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/ContactForm.tsx",
-                lineNumber: 49,
+                lineNumber: 82,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                type: "hidden",
+                name: "email",
+                value: emailValue
+            }, void 0, false, {
+                fileName: "[project]/app/components/ContactForm.tsx",
+                lineNumber: 96,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -108,44 +148,94 @@ function ContactForm() {
                         required: true,
                         name: "mensaje",
                         rows: 4,
-                        className: "mt-1 w-full rounded-xl border border-slate-200 px-3 py-2 text-slate-900 outline-none transition focus:border-emerald-600",
+                        disabled: isSending,
+                        className: "mt-1 w-full rounded-xl border border-slate-200 px-3 py-2 text-slate-900 outline-none transition focus:border-emerald-600 disabled:opacity-60",
                         placeholder: "Cuántos colaboradores atienden y en qué ubicaciones."
                     }, void 0, false, {
                         fileName: "[project]/app/components/ContactForm.tsx",
-                        lineNumber: 62,
+                        lineNumber: 100,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/ContactForm.tsx",
-                lineNumber: 60,
+                lineNumber: 98,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 type: "submit",
-                className: "inline-flex w-full items-center justify-center rounded-full bg-emerald-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800",
-                children: "Enviar solicitud"
+                disabled: isSending,
+                className: "inline-flex w-full items-center justify-center gap-2 rounded-full bg-emerald-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800 disabled:opacity-60",
+                children: isSending ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                            className: "h-4 w-4 animate-spin",
+                            viewBox: "0 0 24 24",
+                            fill: "none",
+                            "aria-hidden": "true",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                                    className: "opacity-25",
+                                    cx: "12",
+                                    cy: "12",
+                                    r: "10",
+                                    stroke: "currentColor",
+                                    strokeWidth: "4"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/components/ContactForm.tsx",
+                                    lineNumber: 118,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                    className: "opacity-75",
+                                    fill: "currentColor",
+                                    d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/components/ContactForm.tsx",
+                                    lineNumber: 119,
+                                    columnNumber: 29
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/app/components/ContactForm.tsx",
+                            lineNumber: 117,
+                            columnNumber: 25
+                        }, this),
+                        "Enviando…"
+                    ]
+                }, void 0, true) : "Enviar solicitud"
             }, void 0, false, {
                 fileName: "[project]/app/components/ContactForm.tsx",
-                lineNumber: 71,
+                lineNumber: 110,
                 columnNumber: 13
             }, this),
-            status === "success" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+            status === "success" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                 className: "text-sm font-medium text-emerald-700",
-                children: "Gracias. Recibimos tu solicitud y te contactaremos pronto."
+                children: "✅ Gracias. Recibimos tu solicitud y te contactaremos pronto."
             }, void 0, false, {
                 fileName: "[project]/app/components/ContactForm.tsx",
-                lineNumber: 79,
+                lineNumber: 129,
                 columnNumber: 17
-            }, this) : null
+            }, this),
+            status === "error" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-sm font-medium text-red-600",
+                children: [
+                    "❌ Error: ",
+                    errorMsg || "Intenta de nuevo o contáctanos por WhatsApp."
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/components/ContactForm.tsx",
+                lineNumber: 135,
+                columnNumber: 17
+            }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/components/ContactForm.tsx",
-        lineNumber: 24,
+        lineNumber: 55,
         columnNumber: 9
     }, this);
 }
-_s(ContactForm, "PrSSnJYnmPMLjC7rLJ6w5budhnU=");
+_s(ContactForm, "PRryO+O/zlHLwPet6Zrupkf7Yh0=");
 _c = ContactForm;
 var _c;
 __turbopack_context__.k.register(_c, "ContactForm");
