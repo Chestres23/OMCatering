@@ -79,11 +79,11 @@ export function Footer() {
                             <div className="rounded-2xl border border-white/12 bg-white/5 p-4">
                                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-300">Contacto</p>
                                 <div className="mt-3 space-y-1.5 text-sm leading-6 text-white/80">
-                                    <p>Teléfono: +593 300 000 0000</p>
-                                    <p>WhatsApp: +593 98 194 2383</p>
-                                    <p>Correo: comercial@omcatering.com</p>
+                                    <p>Teléfono: <a href="tel:+593981942383" className="transition hover:text-white">593 98 194 2383</a></p>
+                                    <p>WhatsApp: <a href="https://wa.me/593981942383" target="_blank" rel="noopener noreferrer" className="text-amber-200 transition hover:text-amber-100">Chatea con nosotros</a></p>
+                                    <p>Correo: <a href="mailto:olguermerino@omcatering.com.ec" className="transition hover:text-white">olguermerino@omcatering.com.ec</a></p>
                                     <a
-                                        href="https://www.google.com/maps?q=-0.0827784463763237,-78.31104278564453&z=17&hl=es"
+                                        href="https://maps.app.goo.gl/wQ6jd89hpMvmBX798"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="mt-2 inline-flex text-amber-200 transition hover:text-amber-100"

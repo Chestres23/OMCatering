@@ -7,6 +7,8 @@ __turbopack_context__.s([
     ()=>contentType,
     "default",
     ()=>OpenGraphImage,
+    "dynamic",
+    ()=>dynamic,
     "size",
     ()=>size
 ]);
@@ -14,6 +16,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$og$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/og.js [app-rsc] (ecmascript)");
 ;
 ;
+const dynamic = "force-static";
 const size = {
     width: 1200,
     height: 630
@@ -43,7 +46,7 @@ function OpenGraphImage() {
                 children: "O M Catering Empresarial"
             }, void 0, false, {
                 fileName: "[project]/app/opengraph-image.tsx",
-                lineNumber: 27,
+                lineNumber: 29,
                 columnNumber: 17
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -66,20 +69,20 @@ function OpenGraphImage() {
                                 children: "Alimentación masiva"
                             }, void 0, false, {
                                 fileName: "[project]/app/opengraph-image.tsx",
-                                lineNumber: 48,
+                                lineNumber: 50,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "con calidad y compromiso"
                             }, void 0, false, {
                                 fileName: "[project]/app/opengraph-image.tsx",
-                                lineNumber: 49,
+                                lineNumber: 51,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/opengraph-image.tsx",
-                        lineNumber: 39,
+                        lineNumber: 41,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -90,13 +93,13 @@ function OpenGraphImage() {
                         children: "+2800 comensales | 7 localidades | Operación confiable"
                     }, void 0, false, {
                         fileName: "[project]/app/opengraph-image.tsx",
-                        lineNumber: 51,
+                        lineNumber: 53,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/opengraph-image.tsx",
-                lineNumber: 38,
+                lineNumber: 40,
                 columnNumber: 17
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -114,7 +117,7 @@ function OpenGraphImage() {
                         children: "Seguridad alimentaria y puntualidad operacional"
                     }, void 0, false, {
                         fileName: "[project]/app/opengraph-image.tsx",
-                        lineNumber: 63,
+                        lineNumber: 65,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -129,19 +132,19 @@ function OpenGraphImage() {
                         children: "Cotiza hoy"
                     }, void 0, false, {
                         fileName: "[project]/app/opengraph-image.tsx",
-                        lineNumber: 66,
+                        lineNumber: 68,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/opengraph-image.tsx",
-                lineNumber: 56,
+                lineNumber: 58,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/opengraph-image.tsx",
-        lineNumber: 13,
+        lineNumber: 15,
         columnNumber: 13
     }, this), size);
 }
@@ -159,6 +162,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 const imageModule = {
     contentType: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$opengraph$2d$image$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["contentType"],
+    dynamic: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$opengraph$2d$image$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["dynamic"],
     size: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$opengraph$2d$image$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["size"]
 };
 async function __TURBOPACK__default__export__(props) {
@@ -168,7 +172,7 @@ async function __TURBOPACK__default__export__(props) {
         const data = {
             alt: imageMetadata.alt,
             type: imageMetadata.contentType || 'image/png',
-            url: imageUrl + (idParam ? '/' + idParam : '') + '?' + "5a9347371fed5c42"
+            url: imageUrl + (idParam ? '/' + idParam : '') + '?' + "a4020eb61f3427b4"
         };
         const { size } = imageMetadata;
         if (size) {

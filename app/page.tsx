@@ -42,10 +42,12 @@ const qualityItems = [
 ];
 
 const gallery = [
-  { src: "/comida.jpg", alt: "Preparación de alimentos saludables", title: "Alimentos" },
-  { src: "/cocina.jpg", alt: "Cocina industrial en operación", title: "Cocina" },
-  { src: "/distribucion.jpg", alt: "Distribución logística de bandejas", title: "Distribución" },
-  { src: "/teamCatering.png", alt: "Equipo de trabajo de catering", title: "Equipo" },
+  { src: "/comida1.jpeg", alt: "Ceviche de camarón preparado por OM Catering", title: "Alimentos" },
+  { src: "/preparacion.jpeg", alt: "Equipo de cocina preparando alimentos", title: "Cocina" },
+  { src: "/equipoCamion.jpeg", alt: "Camión de distribución OM Catering con equipo logístico", title: "Distribución" },
+  { src: "/Equipo.jpeg", alt: "Equipo de trabajo de OM Catering en capacitación", title: "Equipo" },
+  { src: "/comida2.jpeg", alt: "Mesa de buffet con frutas y bocaditos OM Catering", title: "Buffet" },
+  { src: "/bodega.jpeg", alt: "Bodega de almacenamiento refrigerado", title: "Bodega" },
 ];
 
 const desktopSectionShell =
@@ -172,8 +174,8 @@ export default function Home() {
 
             <Reveal delay={120} className="overflow-hidden rounded-3xl">
               <Image
-                src="/teamCatering.png"
-                alt="Equipo de cocina y operaciones"
+                src="/colage.jpeg"
+                alt="Collage de operaciones OM Catering: equipo, cocina, distribución y alimentos"
                 width={900}
                 height={700}
                 className="h-full w-full object-cover"
@@ -242,7 +244,7 @@ export default function Home() {
                   description="Una vista general de nuestras operaciones diarias para garantizar calidad en cada plato entregado."
                 />
               </Reveal>
-              <div className="mt-8 grid gap-5 sm:grid-cols-2">
+              <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {gallery.map((item, index) => (
                   <Reveal key={item.src} delay={index * 90} className="overflow-hidden rounded-3xl bg-white shadow-lg shadow-emerald-900/10">
                     <Image src={item.src} alt={item.alt} width={800} height={540} className="h-56 w-full object-cover sm:h-64" />
@@ -268,13 +270,26 @@ export default function Home() {
 
                 <div className="mt-8 space-y-3 rounded-3xl bg-white p-6 shadow-lg shadow-emerald-900/10">
                   <p className="text-sm text-slate-700">
-                    <span className="font-semibold text-emerald-900">Teléfono:</span> +593 300 000 0000
+                    <span className="font-semibold text-emerald-900">Teléfono:</span>{" "}
+                    <a href="tel:+593981942383" className="transition hover:text-emerald-700">593 98 194 2383</a>
                   </p>
                   <p className="text-sm text-slate-700">
-                    <span className="font-semibold text-emerald-900">WhatsApp:</span> +593 98 194 2383
+                    <span className="font-semibold text-emerald-900">WhatsApp:</span>{" "}
+                    <a
+                      href="https://wa.me/593981942383"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-emerald-700 font-medium transition hover:text-emerald-900"
+                    >
+                      Chatea con nosotros
+                      <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.3-.7-1.5-.8s-.4-.1-.6.1-.6.8-.7 1-.3.2-.6 0a6.7 6.7 0 0 1-2-1.2 7.3 7.3 0 0 1-1.3-1.7c-.1-.3 0-.4.1-.6l.4-.5.2-.4c.1-.1 0-.3 0-.4s-.6-1.4-.8-1.9-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-1 2.2c0 1.3 1 2.6 1 2.8.2.2 2 3.2 4.9 4.3.7.3 1.3.5 1.8.6.8.2 1.5.1 2.1.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.2-.5-.3Z" />
+                      </svg>
+                    </a>
                   </p>
                   <p className="text-sm text-slate-700">
-                    <span className="font-semibold text-emerald-900">Ubicación:</span> Cobertura regional para operaciones industriales y corporativas.
+                    <span className="font-semibold text-emerald-900">Correo:</span>{" "}
+                    <a href="mailto:olguermerino@omcatering.com.ec" className="transition hover:text-emerald-700">olguermerino@omcatering.com.ec</a>
                   </p>
                 </div>
               </Reveal>
@@ -299,11 +314,11 @@ export default function Home() {
                     Con cobertura logística en la zona, podemos atender distribución y servicio con tiempos eficientes y seguimiento continuo.
                   </p>
                   <div className="grid gap-3 pt-2 text-sm text-slate-700">
-                    <p><span className="font-semibold text-emerald-900">Zona:</span> Quito - Guayllabamba, Simon Bolivar</p>
+                    <p><span className="font-semibold text-emerald-900">Zona:</span> Guayllabamba, Simón Bolívar</p>
                     <p><span className="font-semibold text-emerald-900">Disponibilidad:</span> Atención para operaciones empresariales e industriales</p>
                   </div>
                   <a
-                    href="https://www.google.com/maps?q=-0.0827784463763237,-78.31104278564453&z=17&hl=es"
+                    href="https://maps.app.goo.gl/wQ6jd89hpMvmBX798"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex w-full items-center justify-center rounded-full bg-emerald-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800 sm:w-fit"
@@ -317,7 +332,7 @@ export default function Home() {
                 <div className="relative aspect-[4/3] w-full sm:aspect-[16/10]">
                   <iframe
                     title="Ubicación de OM Catering"
-                    src="https://www.google.com/maps?q=-0.0827784463763237,-78.31104278564453&z=17&hl=es&output=embed"
+                    src="https://www.google.com/maps?q=-0.0828178,-78.3137559&z=17&hl=es&output=embed"
                     className="absolute inset-0 h-full w-full"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
