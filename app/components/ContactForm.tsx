@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = "service_i4l1lb9";
 const TEMPLATE_ID = "template_4p1jpgb";
-const PUBLIC_KEY = "4Huj9Iefj8xyV9AcZ";
+const PUBLIC_KEY = "q5Vyl8uCm2uXhZ6j5";
 
 type FormStatus = "idle" | "sending" | "success" | "error";
 
