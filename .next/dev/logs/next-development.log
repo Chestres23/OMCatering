@@ -29,3 +29,4 @@
 {"timestamp":"07:02:24.717","source":"Server","level":"LOG","message":"✓ Compiled in 113ms"}
 {"timestamp":"07:02:26.721","source":"Server","level":"LOG","message":"✓ Compiled in 89ms"}
 {"timestamp":"07:05:42.369","source":"Browser","level":"LOG","message":"EmailJS respuesta: 200 OK"}
+{"timestamp":"11:28:41.993","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
