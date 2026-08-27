@@ -1458,7 +1458,7 @@ function Home() {
                                                                     lineNumber: 317,
                                                                     columnNumber: 24
                                                                 }, this),
-                                                                " Guayllabamba, Simón Bolívar"
+                                                                " San Miguel - El Quinche"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/page.tsx",
