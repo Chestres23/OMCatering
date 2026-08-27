@@ -289,7 +289,7 @@ export default function Home() {
                   </p>
                   <p className="text-sm text-slate-700">
                     <span className="font-semibold text-emerald-900">Correo:</span>{" "}
-                    <a href="mailto:olguermerino@omcatering.com.ec" className="transition hover:text-emerald-700">olguermerino@omcatering.com.ec</a>
+                    <a href="mailto:olguer.merino@omcatering.com.ec" className="transition hover:text-emerald-700">olguer.merino@omcatering.com.ec</a>
                   </p>
                 </div>
               </Reveal>

@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = "service_i4l1lb9";
@@ -14,6 +14,23 @@ export function ContactForm() {
     const [status, setStatus] = useState<FormStatus>("idle");
     const [errorMsg, setErrorMsg] = useState("");
     const [emailValue, setEmailValue] = useState("");
+    const [fadeOut, setFadeOut] = useState(false);
+
+    // Auto-dismiss success/error after 6 seconds with fade-out animation
+    useEffect(() => {
+        if (status === "success" || status === "error") {
+            setFadeOut(false);
+            const fadeTimer = setTimeout(() => setFadeOut(true), 4500);
+            const dismissTimer = setTimeout(() => {
+                setStatus("idle");
+                setFadeOut(false);
+            }, 6000);
+            return () => {
+                clearTimeout(fadeTimer);
+                clearTimeout(dismissTimer);
+            };
+        }
+    }, [status]);
 
     async function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -23,7 +40,6 @@ export function ContactForm() {
         setErrorMsg("");
 
         try {
-            // sendForm envía todos los campos del formulario usando sus atributos "name"
             const result = await emailjs.sendForm(
                 SERVICE_ID,
                 TEMPLATE_ID,
@@ -33,8 +49,8 @@ export function ContactForm() {
             console.log("EmailJS respuesta:", result.status, result.text);
             setStatus("success");
             formRef.current.reset();
+            setEmailValue("");
         } catch (error: unknown) {
-            // Extraer mensaje legible del error de EmailJS
             let message = "Error desconocido";
             if (error instanceof Error) {
                 message = error.message;
@@ -126,15 +142,35 @@ export function ContactForm() {
             </button>
 
             {status === "success" && (
-                <p className="text-sm font-medium text-emerald-700">
-                    ✅ Gracias. Recibimos tu solicitud y te contactaremos pronto.
-                </p>
+                <div
+                    className={`flex items-center gap-3 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 to-green-50 px-5 py-4 shadow-md shadow-emerald-900/5 transition-all duration-500 ${fadeOut ? "translate-y-2 opacity-0" : "translate-y-0 opacity-100"}`}
+                >
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-100">
+                        <svg className="h-5 w-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p className="text-sm font-semibold text-emerald-900">¡Solicitud enviada con éxito!</p>
+                        <p className="text-xs text-emerald-700/80">Recibimos tus datos y te contactaremos a la brevedad.</p>
+                    </div>
+                </div>
             )}
 
             {status === "error" && (
-                <p className="text-sm font-medium text-red-600">
-                    ❌ Error: {errorMsg || "Intenta de nuevo o contáctanos por WhatsApp."}
-                </p>
+                <div
+                    className={`flex items-center gap-3 rounded-2xl border border-red-200 bg-gradient-to-r from-red-50 to-orange-50 px-5 py-4 shadow-md shadow-red-900/5 transition-all duration-500 ${fadeOut ? "translate-y-2 opacity-0" : "translate-y-0 opacity-100"}`}
+                >
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-red-100">
+                        <svg className="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p className="text-sm font-semibold text-red-900">No se pudo enviar</p>
+                        <p className="text-xs text-red-700/80">{errorMsg || "Intenta de nuevo o contáctanos por WhatsApp."}</p>
+                    </div>
+                </div>
             )}
         </form>
     );

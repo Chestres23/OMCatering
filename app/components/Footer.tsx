@@ -81,7 +81,7 @@ export function Footer() {
                                 <div className="mt-3 space-y-1.5 text-sm leading-6 text-white/80">
                                     <p>Teléfono: <a href="tel:+593981942383" className="transition hover:text-white">593 98 194 2383</a></p>
                                     <p>WhatsApp: <a href="https://wa.me/593981942383" target="_blank" rel="noopener noreferrer" className="text-amber-200 transition hover:text-amber-100">Chatea con nosotros</a></p>
-                                    <p>Correo: <a href="mailto:olguermerino@omcatering.com.ec" className="transition hover:text-white">olguermerino@omcatering.com.ec</a></p>
+                                    <p>Correo: <a href="mailto:olguer.merino@omcatering.com.ec" className="transition hover:text-white">olguer.merino@omcatering.com.ec</a></p>
                                     <a
                                         href="https://maps.app.goo.gl/wQ6jd89hpMvmBX798"
                                         target="_blank"
