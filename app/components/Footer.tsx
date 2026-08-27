@@ -92,7 +92,7 @@ export function Footer() {
                                     <p>WhatsApp: <a href="https://wa.me/593981942383" target="_blank" rel="noopener noreferrer" className="text-amber-200 transition hover:text-amber-100">Chatea con nosotros</a></p>
                                     <p>Correo: <a href="mailto:olguer.merino@omcatering.com.ec" className="transition hover:text-white">olguer.merino@omcatering.com.ec</a></p>
                                     <a
-                                        href="https://maps.app.goo.gl/wQ6jd89hpMvmBX798"
+                                        href="https://maps.app.goo.gl/pBSbX2KyU24jFDqy9"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="mt-2 inline-flex text-amber-200 transition hover:text-amber-100"

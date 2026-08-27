@@ -318,7 +318,7 @@ export default function Home() {
                     <p><span className="font-semibold text-emerald-900">Disponibilidad:</span> Atención para operaciones empresariales e industriales</p>
                   </div>
                   <a
-                    href="https://maps.app.goo.gl/wQ6jd89hpMvmBX798"
+                    href="https://maps.app.goo.gl/pBSbX2KyU24jFDqy9"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex w-full items-center justify-center rounded-full bg-emerald-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800 sm:w-fit"
@@ -332,7 +332,7 @@ export default function Home() {
                 <div className="relative aspect-[4/3] w-full sm:aspect-[16/10]">
                   <iframe
                     title="Ubicación de OM Catering"
-                    src="https://www.google.com/maps?q=-0.0828178,-78.3137559&z=17&hl=es&output=embed"
+                    src="https://www.google.com/maps?q=-0.0828178,-78.311181&z=17&hl=es&output=embed"
                     className="absolute inset-0 h-full w-full"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"

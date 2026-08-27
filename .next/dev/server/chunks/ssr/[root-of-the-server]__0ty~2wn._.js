@@ -319,7 +319,7 @@ function Footer() {
                                                                 columnNumber: 37
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                                href: "https://maps.app.goo.gl/wQ6jd89hpMvmBX798",
+                                                                href: "https://maps.app.goo.gl/pBSbX2KyU24jFDqy9",
                                                                 target: "_blank",
                                                                 rel: "noopener noreferrer",
                                                                 className: "mt-2 inline-flex text-amber-200 transition hover:text-amber-100",
@@ -1489,7 +1489,7 @@ function Home() {
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                    href: "https://maps.app.goo.gl/wQ6jd89hpMvmBX798",
+                                                    href: "https://maps.app.goo.gl/pBSbX2KyU24jFDqy9",
                                                     target: "_blank",
                                                     rel: "noopener noreferrer",
                                                     className: "inline-flex w-full items-center justify-center rounded-full bg-emerald-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800 sm:w-fit",
@@ -1517,7 +1517,7 @@ function Home() {
                                             className: "relative aspect-[4/3] w-full sm:aspect-[16/10]",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
                                                 title: "Ubicación de OM Catering",
-                                                src: "https://www.google.com/maps?q=-0.0828178,-78.3137559&z=17&hl=es&output=embed",
+                                                src: "https://www.google.com/maps?q=-0.0828178,-78.311181&z=17&hl=es&output=embed",
                                                 className: "absolute inset-0 h-full w-full",
                                                 loading: "lazy",
                                                 referrerPolicy: "no-referrer-when-downgrade"
