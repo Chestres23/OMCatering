@@ -314,7 +314,7 @@ export default function Home() {
                     Con cobertura logística en la zona, podemos atender distribución y servicio con tiempos eficientes y seguimiento continuo.
                   </p>
                   <div className="grid gap-3 pt-2 text-sm text-slate-700">
-                    <p><span className="font-semibold text-emerald-900">Zona:</span> Guayllabamba, Simón Bolívar</p>
+                    <p><span className="font-semibold text-emerald-900">Zona:</span> San Miguel - El Quinche</p>
                     <p><span className="font-semibold text-emerald-900">Disponibilidad:</span> Atención para operaciones empresariales e industriales</p>
                   </div>
                   <a
