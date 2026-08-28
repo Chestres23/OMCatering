@@ -25,7 +25,25 @@ export function Navbar() {
             return;
         }
 
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        const header = document.querySelector("header");
+        const headerHeight = header instanceof HTMLElement ? header.offsetHeight : 0;
+        const targetRect = target.getBoundingClientRect();
+        const absoluteTop = targetRect.top + window.scrollY;
+        const availableHeight = window.innerHeight - headerHeight;
+        const centeredOffset = Math.max(0, (availableHeight - targetRect.height) / 2);
+        const comfortableOffset =
+            targetRect.height <= availableHeight
+                ? centeredOffset
+                : Math.min(availableHeight * 0.18, 120);
+        const nextTop =
+            href === "#inicio"
+                ? 0
+                : absoluteTop - headerHeight - comfortableOffset;
+
+        window.scrollTo({
+            top: Math.max(0, nextTop),
+            behavior: "smooth",
+        });
         history.replaceState(null, "", href);
 
         const details = event.currentTarget.closest("details");
@@ -36,7 +54,7 @@ export function Navbar() {
 
     return (
         <header className="fixed inset-x-0 top-0 z-50 border-b border-white/20 bg-emerald-950/85 backdrop-blur">
-            <nav className="mx-auto max-w-6xl px-4 py-3 sm:px-6 lg:px-8">
+            <nav className="mx-auto max-w-6xl px-4 py-2 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between">
                     <a
                         href="#inicio"
@@ -48,10 +66,10 @@ export function Navbar() {
                             alt="Logo de O M Catering"
                             width={56}
                             height={56}
-                            className="h-12 w-12 rounded-full border border-white/40 object-cover shadow-[0_6px_16px_rgba(0,0,0,0.35)]"
+                            className="h-10 w-10 rounded-full border border-white/40 object-cover shadow-[0_6px_16px_rgba(0,0,0,0.35)] sm:h-11 sm:w-11"
                             priority
                         />
-                        <span className="font-script text-2xl font-semibold italic leading-none tracking-wide text-white sm:text-3xl">
+                        <span className="font-script text-2xl font-semibold italic leading-none tracking-wide text-white sm:text-[1.7rem]">
                             O M Catering
                         </span>
                     </a>
@@ -74,7 +92,7 @@ export function Navbar() {
                         <a
                             href="#contacto"
                             onClick={(event) => handleAnchorClick(event, "#contacto")}
-                            className="rounded-full bg-amber-400 px-4 py-2 text-sm font-semibold text-emerald-950 transition hover:bg-amber-300"
+                            className="rounded-full bg-amber-400 px-4 py-1.5 text-sm font-semibold text-emerald-950 transition hover:bg-amber-300"
                         >
                             Cotizar
                         </a>

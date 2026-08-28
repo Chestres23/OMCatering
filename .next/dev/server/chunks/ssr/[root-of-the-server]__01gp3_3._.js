@@ -975,7 +975,7 @@ const qualityItems = [
         }, ("TURBOPACK compile-time value", void 0))
     }
 ];
-const desktopSectionShell = "mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16";
+const desktopSectionShell = "mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14";
 function Home() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
@@ -989,14 +989,14 @@ function Home() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                         id: "inicio",
-                        className: "hero-bg relative overflow-hidden pt-24",
+                        className: "hero-bg relative overflow-hidden pt-[4.5rem] sm:pt-20 lg:pt-[5.5rem]",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "mx-auto grid min-h-[85vh] max-w-6xl items-center gap-10 px-4 pb-16 sm:px-6 lg:grid-cols-2 lg:px-8",
+                            className: "mx-auto grid min-h-[calc(100svh-5rem)] max-w-6xl items-start gap-6 px-4 pb-28 pt-6 sm:px-6 sm:pb-24 sm:pt-8 lg:grid-cols-2 lg:gap-10 lg:px-8 lg:pt-10",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$Reveal$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Reveal"], {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "relative mb-7 ml-2 w-fit sm:ml-6",
+                                            className: "relative mb-3 ml-2 w-fit sm:mb-4 sm:ml-6",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: "absolute -left- -top-2 h-12 w-12 rounded-full bg-amber-300/35 blur-xl"
@@ -1021,7 +1021,7 @@ function Home() {
                                                             alt: "Identidad visual de O M Catering",
                                                             width: 300,
                                                             height: 300,
-                                                            className: "h-30 w-30 rounded-full object-cover sm:h-38 sm:w-39"
+                                                            className: "h-20 w-20 rounded-full object-cover sm:h-24 sm:w-24 lg:h-28 lg:w-28"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/page.tsx",
                                                             lineNumber: 107,
@@ -1052,7 +1052,7 @@ function Home() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                            className: "mt-6 font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-6xl",
+                                            className: "mt-4 font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-[3.45rem]",
                                             children: "Alimentamos a tu equipo con calidad y compromiso"
                                         }, void 0, false, {
                                             fileName: "[project]/app/page.tsx",
@@ -1060,7 +1060,7 @@ function Home() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "mt-6 max-w-xl text-base leading-7 text-emerald-50 sm:text-lg",
+                                            className: "mt-4 max-w-xl text-base leading-7 text-emerald-50 sm:text-lg",
                                             children: "Soluciones de alimentación corporativa para organizaciones que necesitan escala, orden y confianza en cada servicio."
                                         }, void 0, false, {
                                             fileName: "[project]/app/page.tsx",
@@ -1068,7 +1068,7 @@ function Home() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "font-script mt-4 text-3xl leading-none text-amber-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] sm:text-4xl",
+                                            className: "font-script mt-3 text-3xl leading-none text-amber-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] sm:text-4xl",
                                             style: {
                                                 textShadow: "0 2px 16px rgba(0,0,0,0.55), 0 0 40px rgba(0,0,0,0.3)"
                                             },
@@ -1079,7 +1079,7 @@ function Home() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "mt-8 flex flex-wrap gap-4",
+                                            className: "mt-6 flex flex-wrap gap-3 sm:gap-4",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                     href: "#contacto",
@@ -1113,7 +1113,7 @@ function Home() {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$components$2f$ui$2f$Reveal$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Reveal"], {
                                     delay: 120,
-                                    className: "rounded-3xl border border-white/20 bg-white/10 p-6 backdrop-blur",
+                                    className: "rounded-3xl border border-white/20 bg-white/10 p-5 backdrop-blur sm:p-6",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "text-sm font-semibold uppercase tracking-[0.2em] text-amber-300",
@@ -1124,9 +1124,9 @@ function Home() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                            className: "mt-5 space-y-4",
+                                            className: "mt-4 space-y-3 sm:mt-5 sm:space-y-4",
                                             children: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$lib$2f$site$2d$content$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["benefits"].map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                    className: "rounded-2xl border border-white/10 bg-white/10 p-4",
+                                                    className: "rounded-2xl border border-white/10 bg-white/10 p-3 sm:p-4",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                                             className: "text-lg font-semibold text-white",

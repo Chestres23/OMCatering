@@ -87,7 +87,7 @@ const qualityItems = [
 ];
 
 const desktopSectionShell =
-  "mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16";
+  "mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14";
 
 export default function Home() {
   return (
@@ -96,10 +96,10 @@ export default function Home() {
 
       <main className="bg-slate-50 pb-24 text-slate-900 sm:pb-28 lg:pb-32">
         {/* ── HERO ── */}
-        <section id="inicio" className="hero-bg relative overflow-hidden pt-24">
-          <div className="mx-auto grid min-h-[85vh] max-w-6xl items-center gap-10 px-4 pb-16 sm:px-6 lg:grid-cols-2 lg:px-8">
+        <section id="inicio" className="hero-bg relative overflow-hidden pt-[4.5rem] sm:pt-20 lg:pt-[5.5rem]">
+          <div className="mx-auto grid min-h-[calc(100svh-5rem)] max-w-6xl items-start gap-6 px-4 pb-28 pt-6 sm:px-6 sm:pb-24 sm:pt-8 lg:grid-cols-2 lg:gap-10 lg:px-8 lg:pt-10">
             <Reveal>
-              <div className="relative mb-7 ml-2 w-fit sm:ml-6">
+              <div className="relative mb-3 ml-2 w-fit sm:mb-4 sm:ml-6">
                 <span className="absolute -left- -top-2 h-12 w-12 rounded-full bg-amber-300/35 blur-xl" />
                 <span className="absolute -bottom-2 -right-2 h-14 w-14 rounded-full bg-emerald-200/30 blur-xl" />
                 <div className="relative rounded-full bg-gradient-to-br from-amber-300 via-amber-200 to-white p-[3px] shadow-[0_14px_30px_rgba(0,0,0,0.35)]">
@@ -109,7 +109,7 @@ export default function Home() {
                       alt="Identidad visual de O M Catering"
                       width={300}
                       height={300}
-                      className="h-30 w-30 rounded-full object-cover sm:h-38 sm:w-39"
+                      className="h-20 w-20 rounded-full object-cover sm:h-24 sm:w-24 lg:h-28 lg:w-28"
                     />
                   </div>
                 </div>
@@ -117,16 +117,16 @@ export default function Home() {
               <p className="inline-flex rounded-full bg-white/85 px-4 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-900">
                 Catering empresarial
               </p>
-              <h1 className="mt-6 font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
+              <h1 className="mt-4 font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-[3.45rem]">
                 Alimentamos a tu equipo con calidad y compromiso
               </h1>
-              <p className="mt-6 max-w-xl text-base leading-7 text-emerald-50 sm:text-lg">
+              <p className="mt-4 max-w-xl text-base leading-7 text-emerald-50 sm:text-lg">
                 Soluciones de alimentación corporativa para organizaciones que necesitan escala, orden y confianza en cada servicio.
               </p>
-              <p className="font-script mt-4 text-3xl leading-none text-amber-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] sm:text-4xl" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.55), 0 0 40px rgba(0,0,0,0.3)" }}>
+              <p className="font-script mt-3 text-3xl leading-none text-amber-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] sm:text-4xl" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.55), 0 0 40px rgba(0,0,0,0.3)" }}>
                 Mi sazón, mi pasión
               </p>
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="mt-6 flex flex-wrap gap-3 sm:gap-4">
                 <a
                   href="#contacto"
                   className="rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-emerald-950 transition hover:bg-amber-300 hover:shadow-lg hover:shadow-amber-400/25"
@@ -142,11 +142,11 @@ export default function Home() {
               </div>
             </Reveal>
 
-            <Reveal delay={120} className="rounded-3xl border border-white/20 bg-white/10 p-6 backdrop-blur">
+            <Reveal delay={120} className="rounded-3xl border border-white/20 bg-white/10 p-5 backdrop-blur sm:p-6">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">Beneficios clave</p>
-              <ul className="mt-5 space-y-4">
+              <ul className="mt-4 space-y-3 sm:mt-5 sm:space-y-4">
                 {benefits.map((item) => (
-                  <li key={item.title} className="rounded-2xl border border-white/10 bg-white/10 p-4">
+                  <li key={item.title} className="rounded-2xl border border-white/10 bg-white/10 p-3 sm:p-4">
                     <h2 className="text-lg font-semibold text-white">{item.title}</h2>
                     <p className="mt-1 text-sm leading-6 text-emerald-50">{item.description}</p>
                   </li>
