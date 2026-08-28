@@ -48,6 +48,12 @@
       "namedRegex": "^/opengraph\\-image(?:/)?$"
     },
     {
+      "page": "/politica-de-privacidad",
+      "regex": "^/politica\\-de\\-privacidad(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/politica\\-de\\-privacidad(?:/)?$"
+    },
+    {
       "page": "/robots.txt",
       "regex": "^/robots\\.txt(?:/)?$",
       "routeKeys": {},

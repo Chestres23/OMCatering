@@ -1,53 +1,89 @@
 import Image from "next/image";
-import { ContactForm } from "./components/ContactForm";
-import { Footer } from "./components/Footer";
-import { Navbar } from "./components/Navbar";
-import { Reveal } from "./components/Reveal";
-import { SectionTitle } from "./components/SectionTitle";
-
-const benefits = [
-  {
-    title: "Calidad nutricional",
-    description: "Menús balanceados y personalizados por tipo de operación, perfil ocupacional y objetivos de bienestar.",
-  },
-  {
-    title: "Cobertura multisitio",
-    description: "Operamos en 7 localidades con procesos estandarizados para asegurar consistencia y tiempos de entrega.",
-  },
-  {
-    title: "Escalabilidad operativa",
-    description: "Experiencia atendiendo grandes volúmenes diarios sin perder enfoque en inocuidad y servicio humano.",
-  },
-];
-
-const stats = [
-  { value: "+2800", label: "Comensales atendidos" },
-  { value: "7", label: "Localidades activas" },
-  { value: "99%", label: "Entregas puntuales" },
-  { value: "24/7", label: "Seguimiento operativo" },
-];
+import { Footer } from "./components/layout/Footer";
+import { Navbar } from "./components/layout/Navbar";
+import { WhatsAppFloat } from "./components/layout/WhatsAppFloat";
+import { ContactForm } from "./components/ui/ContactForm";
+import { ImageCarousel } from "./components/ui/ImageCarousel";
+import { Reveal } from "./components/ui/Reveal";
+import { SectionTitle } from "./components/ui/SectionTitle";
+import { benefits, galleryCarousel, gallerySingle, stats } from "./lib/site-content";
 
 const services = [
-  "Catering empresarial para desayunos y almuerzos.",
-  "Alimentación para plantaciones, obras e industrias.",
-  "Distribución de alimentos desde centro logístico propio.",
-  "Adaptación total a turnos, capacidad y cultura de cada cliente.",
+  {
+    title: "Catering empresarial",
+    description: "Desayunos y almuerzos diseñados para equipos corporativos con menús variados y balanceados.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5m-6 1.5v-1.5m12 9.75-1.5.75a3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0 3.354 3.354 0 0 0-3 0 3.354 3.354 0 0 1-3 0L3 16.5m15-3.379a48.474 48.474 0 0 0-6-.371c-2.032 0-4.034.126-6 .371m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.169c0 .621-.504 1.125-1.125 1.125H4.125A1.125 1.125 0 0 1 3 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 0 1 6 13.12" />
+      </svg>
+    ),
+  },
+  {
+    title: "Alimentación industrial",
+    description: "Servicio para plantaciones, obras e industrias con logística adaptada a cada operación.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+      </svg>
+    ),
+  },
+  {
+    title: "Distribución logística",
+    description: "Alimentos desde centro logístico propio con cadena de frío y trazabilidad completa.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25m-2.25 0h-2.25m0 0V5.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v3.75m-7.5 0h7.5" />
+      </svg>
+    ),
+  },
+  {
+    title: "Adaptación operativa",
+    description: "Ajuste total a turnos, capacidad y cultura organizacional de cada cliente.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.559.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.894.149c-.424.07-.764.383-.929.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.204-.107-.397.165-.71.505-.78.929l-.15.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.272-.806.108-1.204-.165-.397-.506-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.108-1.204l-.526-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894ZM15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+      </svg>
+    ),
+  },
 ];
 
 const qualityItems = [
-  "Protocolos de higiene con trazabilidad por lote.",
-  "Control nutricional con fichas técnicas y porciones estándar.",
-  "Cumplimiento riguroso de normas sanitarias y auditorías internas.",
-  "Supervisión médica y ocupacional para proteger a cada comensal.",
-];
-
-const gallery = [
-  { src: "/comida1.jpeg", alt: "Ceviche de camarón preparado por OM Catering", title: "Alimentos" },
-  { src: "/preparacion.jpeg", alt: "Equipo de cocina preparando alimentos", title: "Cocina" },
-  { src: "/equipoCamion.jpeg", alt: "Camión de distribución OM Catering con equipo logístico", title: "Distribución" },
-  { src: "/Equipo.jpeg", alt: "Equipo de trabajo de OM Catering en capacitación", title: "Equipo" },
-  { src: "/comida2.jpeg", alt: "Mesa de buffet con frutas y bocaditos OM Catering", title: "Buffet" },
-  { src: "/bodega.jpeg", alt: "Bodega de almacenamiento refrigerado", title: "Bodega" },
+  {
+    title: "Trazabilidad por lote",
+    description: "Protocolos de higiene con trazabilidad por lote.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Control nutricional",
+    description: "Control nutricional con fichas técnicas y porciones estándar.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15a2.25 2.25 0 0 1 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Normas sanitarias",
+    description: "Cumplimiento riguroso de normas sanitarias y auditorías internas.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15a2.25 2.25 0 0 1 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
+      </svg>
+    ),
+  },
+  {
+    title: "Supervisión médica",
+    description: "Supervisión médica y ocupacional para proteger a cada comensal.",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+      </svg>
+    ),
+  },
 ];
 
 const desktopSectionShell =
@@ -59,6 +95,7 @@ export default function Home() {
       <Navbar />
 
       <main className="bg-slate-50 pb-24 text-slate-900 sm:pb-28 lg:pb-32">
+        {/* ── HERO ── */}
         <section id="inicio" className="hero-bg relative overflow-hidden pt-24">
           <div className="mx-auto grid min-h-[85vh] max-w-6xl items-center gap-10 px-4 pb-16 sm:px-6 lg:grid-cols-2 lg:px-8">
             <Reveal>
@@ -86,13 +123,13 @@ export default function Home() {
               <p className="mt-6 max-w-xl text-base leading-7 text-emerald-50 sm:text-lg">
                 Soluciones de alimentación corporativa para organizaciones que necesitan escala, orden y confianza en cada servicio.
               </p>
-              <p className="font-script mt-4 text-3xl leading-none text-amber-200 drop-shadow-[0_4px_10px_rgba(0,0,0,0.35)] sm:text-4xl">
+              <p className="font-script mt-4 text-3xl leading-none text-amber-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] sm:text-4xl" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.55), 0 0 40px rgba(0,0,0,0.3)" }}>
                 Mi sazón, mi pasión
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href="#contacto"
-                  className="rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-emerald-950 transition hover:bg-amber-300"
+                  className="rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-emerald-950 transition hover:bg-amber-300 hover:shadow-lg hover:shadow-amber-400/25"
                 >
                   Solicitar propuesta
                 </a>
@@ -119,17 +156,20 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-y border-emerald-900/10 bg-white py-8">
+        {/* ── STATS ── */}
+        <section className="border-y border-emerald-900/10 bg-white py-10">
           <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 px-4 sm:grid-cols-4 sm:px-6 lg:px-8">
             {stats.map((item, index) => (
-              <Reveal key={item.label} delay={index * 80} className="rounded-2xl bg-emerald-50 p-4 text-center">
-                <p className="text-2xl font-bold text-emerald-900 sm:text-3xl">{item.value}</p>
-                <p className="mt-1 text-sm text-slate-600">{item.label}</p>
+              <Reveal key={item.label} delay={index * 80} className="relative rounded-2xl border border-emerald-100 bg-gradient-to-b from-emerald-50/80 to-white p-5 text-center">
+                <div className="absolute inset-x-0 top-0 mx-auto h-1 w-12 rounded-b-full bg-gradient-to-r from-amber-400 to-amber-300" />
+                <p className="mt-1 bg-gradient-to-br from-emerald-800 to-emerald-950 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl">{item.value}</p>
+                <p className="mt-2 text-sm font-medium text-slate-500">{item.label}</p>
               </Reveal>
             ))}
           </div>
         </section>
 
+        {/* ── QUIÉNES SOMOS ── */}
         <section id="quienes-somos" className="bg-white">
           <div className={desktopSectionShell}>
             <div className="w-full">
@@ -186,6 +226,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── SERVICIOS ── */}
         <section id="servicios" className="border-y border-emerald-900/10 bg-white">
           <div className={desktopSectionShell}>
             <div className="w-full">
@@ -199,11 +240,15 @@ export default function Home() {
               <div className="mt-8 grid gap-5 md:grid-cols-2">
                 {services.map((service, index) => (
                   <Reveal
-                    key={service}
+                    key={service.title}
                     delay={index * 80}
                     className="group rounded-3xl border border-emerald-900/10 bg-gradient-to-br from-emerald-50 to-amber-50 p-6 transition hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-900/10"
                   >
-                    <p className="text-base leading-7 text-slate-700">{service}</p>
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-700 transition group-hover:bg-emerald-700 group-hover:text-white">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-base font-semibold text-emerald-900">{service.title}</h3>
+                    <p className="mt-2 text-sm leading-7 text-slate-600">{service.description}</p>
                   </Reveal>
                 ))}
               </div>
@@ -211,6 +256,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── CALIDAD ── */}
         <section id="calidad" className="bg-emerald-950 text-white">
           <div className={desktopSectionShell}>
             <div className="w-full">
@@ -225,8 +271,12 @@ export default function Home() {
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {qualityItems.map((item, index) => (
-                  <Reveal key={item} delay={index * 80} className="rounded-2xl border border-white/15 bg-white/8 p-5">
-                    <p className="text-sm leading-7 text-emerald-50">{item}</p>
+                  <Reveal key={item.title} delay={index * 80} className="group rounded-2xl border border-white/15 bg-white/8 p-5 transition hover:bg-white/12">
+                    <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-800/50 text-amber-300 transition group-hover:bg-amber-400/20">
+                      {item.icon}
+                    </div>
+                    <h3 className="text-sm font-semibold text-white">{item.title}</h3>
+                    <p className="mt-1 text-sm leading-7 text-emerald-50/80">{item.description}</p>
                   </Reveal>
                 ))}
               </div>
@@ -234,6 +284,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── GALERÍA ── */}
         <section id="galeria" className="bg-slate-50">
           <div className={desktopSectionShell}>
             <div className="w-full">
@@ -244,10 +295,31 @@ export default function Home() {
                   description="Una vista general de nuestras operaciones diarias para garantizar calidad en cada plato entregado."
                 />
               </Reveal>
-              <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                {gallery.map((item, index) => (
-                  <Reveal key={item.src} delay={index * 90} className="overflow-hidden rounded-3xl bg-white shadow-lg shadow-emerald-900/10">
-                    <Image src={item.src} alt={item.alt} width={800} height={540} className="h-56 w-full object-cover sm:h-64" />
+
+              {/* Fila 1 — Carruseles (múltiples fotos rotativas) */}
+              <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                {galleryCarousel.map((item, index) => (
+                  <Reveal key={item.title} delay={index * 90} className="overflow-hidden rounded-3xl bg-white shadow-lg shadow-emerald-900/10">
+                    <div className="relative h-56 sm:h-64">
+                      <ImageCarousel images={item.images} interval={3500 + index * 500} className="h-full w-full" />
+                    </div>
+                    <div className="p-4">
+                      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">{item.title}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+
+              {/* Fila 2 — Fotos únicas (estáticas con hover) */}
+              <div className="mt-5 grid gap-5 sm:grid-cols-2">
+                {gallerySingle.map((item, index) => (
+                  <Reveal key={item.src} delay={index * 90} className="gallery-card group relative overflow-hidden rounded-3xl bg-white shadow-lg shadow-emerald-900/10">
+                    <div className="relative overflow-hidden">
+                      <Image src={item.src} alt={item.alt} width={800} height={540} className="h-56 w-full object-cover sm:h-64" />
+                      <div className="gallery-overlay absolute inset-0 flex items-center justify-center bg-emerald-950/50 backdrop-blur-[2px]">
+                        <p className="rounded-full border border-white/30 bg-white/15 px-5 py-2 text-sm font-semibold tracking-wider text-white uppercase backdrop-blur-sm">{item.title}</p>
+                      </div>
+                    </div>
                     <div className="p-4">
                       <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">{item.title}</p>
                     </div>
@@ -258,6 +330,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── CONTACTO ── */}
         <section id="contacto" className="bg-gradient-to-b from-amber-50 to-white">
           <div className={desktopSectionShell}>
             <div className="grid w-full gap-8 lg:grid-cols-[1fr_1.1fr]">
@@ -268,29 +341,45 @@ export default function Home() {
                   description="Cuéntanos la cantidad de personal, turnos y ubicaciones. Te preparamos una propuesta alineada a tus objetivos de servicio."
                 />
 
-                <div className="mt-8 space-y-3 rounded-3xl bg-white p-6 shadow-lg shadow-emerald-900/10">
-                  <p className="text-sm text-slate-700">
-                    <span className="font-semibold text-emerald-900">Teléfono:</span>{" "}
-                    <a href="tel:+593981942383" className="transition hover:text-emerald-700">593 98 194 2383</a>
-                  </p>
-                  <p className="text-sm text-slate-700">
-                    <span className="font-semibold text-emerald-900">WhatsApp:</span>{" "}
-                    <a
-                      href="https://wa.me/593981942383"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-emerald-700 font-medium transition hover:text-emerald-900"
-                    >
-                      Chatea con nosotros
-                      <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden="true">
+                <div className="mt-8 space-y-4 rounded-3xl bg-white p-6 shadow-lg shadow-emerald-900/10">
+                  {/* Teléfono */}
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
+                      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">Teléfono</p>
+                      <a href="tel:+593981942383" className="text-sm font-medium text-slate-700 transition hover:text-emerald-700">593 98 194 2383</a>
+                    </div>
+                  </div>
+
+                  {/* WhatsApp */}
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-100 text-green-700">
+                      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
                         <path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.3-.7-1.5-.8s-.4-.1-.6.1-.6.8-.7 1-.3.2-.6 0a6.7 6.7 0 0 1-2-1.2 7.3 7.3 0 0 1-1.3-1.7c-.1-.3 0-.4.1-.6l.4-.5.2-.4c.1-.1 0-.3 0-.4s-.6-1.4-.8-1.9-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-1 2.2c0 1.3 1 2.6 1 2.8.2.2 2 3.2 4.9 4.3.7.3 1.3.5 1.8.6.8.2 1.5.1 2.1.1.7-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.2-.3-.2-.5-.3Z" />
                       </svg>
-                    </a>
-                  </p>
-                  <p className="text-sm text-slate-700">
-                    <span className="font-semibold text-emerald-900">Correo:</span>{" "}
-                    <a href="mailto:olguer.merino@omcatering.com.ec" className="transition hover:text-emerald-700">olguer.merino@omcatering.com.ec</a>
-                  </p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">WhatsApp</p>
+                      <a href="https://wa.me/593981942383" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-green-700 transition hover:text-green-900">Chatea con nosotros →</a>
+                    </div>
+                  </div>
+
+                  {/* Correo */}
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-700">
+                      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={1.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">Correo</p>
+                      <a href="mailto:olguer.merino@omcatering.com.ec" className="text-sm font-medium text-slate-700 transition hover:text-emerald-700">olguer.merino@omcatering.com.ec</a>
+                    </div>
+                  </div>
                 </div>
               </Reveal>
 
@@ -301,6 +390,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── UBICACIÓN ── */}
         <section id="ubicacion" className="bg-white">
           <div className={desktopSectionShell}>
             <div className="grid gap-6 md:gap-8 lg:grid-cols-[1fr_1.15fr] lg:items-center">
@@ -345,6 +435,8 @@ export default function Home() {
       </main>
 
       <Footer />
+      {/* WhatsApp flotante: comenta esta línea para ocultar el botón. */}
+      <WhatsAppFloat />
     </>
   );
 }

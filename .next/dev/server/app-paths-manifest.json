@@ -1,3 +1,4 @@
 {
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/politica-de-privacidad/page": "app/politica-de-privacidad/page.js"
 }

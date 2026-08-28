@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Dancing_Script, Manrope, Merriweather } from "next/font/google";
+import { Dancing_Script, Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const merriweather = Merriweather({
-  variable: "--font-merriweather",
-  weight: ["400", "700"],
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
 
@@ -70,7 +70,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${manrope.variable} ${merriweather.variable} ${dancingScript.variable} h-full antialiased`}
+      className={`${inter.variable} ${playfair.variable} ${dancingScript.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
