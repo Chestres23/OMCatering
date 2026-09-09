@@ -297,14 +297,21 @@ export default function Home() {
               </Reveal>
 
               {/* Fila 1 — Carruseles (múltiples fotos rotativas) */}
-              <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="mt-10 grid auto-rows-[12rem] gap-5 sm:grid-cols-2 lg:auto-rows-[14rem] lg:grid-cols-4">
                 {galleryCarousel.map((item, index) => (
-                  <Reveal key={item.title} delay={index * 90} className="overflow-hidden rounded-3xl bg-white shadow-lg shadow-emerald-900/10">
-                    <div className="relative h-56 sm:h-64">
+                  <Reveal
+                    key={item.title}
+                    delay={index * 90}
+                    className={`group relative overflow-hidden rounded-[1.75rem] border border-white/70 bg-white shadow-[0_18px_45px_-22px_rgba(6,78,59,0.55)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_55px_-22px_rgba(6,78,59,0.7)] ${
+                      index === 0 ? "sm:row-span-2 lg:col-span-2 lg:row-span-2" : ""
+                    }`}
+                  >
+                    <div className="relative h-full min-h-[12rem] overflow-hidden bg-emerald-950 lg:min-h-0">
                       <ImageCarousel images={item.images} interval={3500 + index * 500} className="h-full w-full" />
-                    </div>
-                    <div className="p-4">
-                      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">{item.title}</p>
+                      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/60 via-black/10 to-transparent px-5 pb-5 pt-16">
+                        <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-amber-300">OM Catering</p>
+                        <p className="mt-1 font-serif text-xl text-white sm:text-2xl">{item.title}</p>
+                      </div>
                     </div>
                   </Reveal>
                 ))}
@@ -313,11 +320,14 @@ export default function Home() {
               {/* Fila 2 — Fotos únicas (estáticas con hover) */}
               <div className="mt-5 grid gap-5 sm:grid-cols-2">
                 {gallerySingle.map((item, index) => (
-                  <Reveal key={item.src} delay={index * 90} className="gallery-card group relative overflow-hidden rounded-3xl bg-white shadow-lg shadow-emerald-900/10">
+                  <Reveal key={item.src} delay={index * 90} className="gallery-card group relative overflow-hidden rounded-[1.75rem] border border-white/70 bg-white shadow-[0_18px_45px_-22px_rgba(6,78,59,0.55)]">
                     <div className="relative overflow-hidden">
-                      <Image src={item.src} alt={item.alt} width={800} height={540} className="h-56 w-full object-cover sm:h-64" />
-                      <div className="gallery-overlay absolute inset-0 flex items-center justify-center bg-emerald-950/50 backdrop-blur-[2px]">
-                        <p className="rounded-full border border-white/30 bg-white/15 px-5 py-2 text-sm font-semibold tracking-wider text-white uppercase backdrop-blur-sm">{item.title}</p>
+                      <Image src={item.src} alt={item.alt} width={800} height={540} className="h-64 w-full object-cover sm:h-80" />
+                      <div className="gallery-overlay absolute inset-0 flex items-end bg-gradient-to-t from-emerald-950/80 via-emerald-950/10 to-transparent p-6">
+                        <div>
+                          <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-amber-300">Selección del chef</p>
+                          <p className="mt-1 font-serif text-2xl text-white">{item.title}</p>
+                        </div>
                       </div>
                     </div>
                     <div className="p-4">

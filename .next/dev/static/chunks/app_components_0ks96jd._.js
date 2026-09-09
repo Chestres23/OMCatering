@@ -245,7 +245,7 @@ function WhatsAppFloat() {
         target: "_blank",
         rel: "noopener noreferrer",
         "aria-label": "Chatea con nosotros por WhatsApp",
-        className: `fixed bottom-24 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg shadow-green-600/30 transition-all duration-500 hover:scale-110 hover:bg-green-600 hover:shadow-xl hover:shadow-green-600/40 ${visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"} ${pulse ? "animate-bounce" : ""}`,
+        className: `fixed bottom-6 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg shadow-green-600/30 transition-all duration-500 hover:scale-110 hover:bg-green-600 hover:shadow-xl hover:shadow-green-600/40 sm:bottom-24 sm:right-6 ${visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"} ${pulse ? "animate-bounce" : ""}`,
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
             viewBox: "0 0 24 24",
             className: "h-7 w-7",
@@ -663,6 +663,7 @@ var _s = __turbopack_context__.k.signature();
 function ImageCarousel({ images, interval = 4000, className = "" }) {
     _s();
     const [current, setCurrent] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [isPaused, setIsPaused] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const next = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
         "ImageCarousel.useCallback[next]": ()=>{
             setCurrent({
@@ -672,22 +673,36 @@ function ImageCarousel({ images, interval = 4000, className = "" }) {
     }["ImageCarousel.useCallback[next]"], [
         images.length
     ]);
+    const previous = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
+        "ImageCarousel.useCallback[previous]": ()=>{
+            setCurrent({
+                "ImageCarousel.useCallback[previous]": (prev)=>(prev - 1 + images.length) % images.length
+            }["ImageCarousel.useCallback[previous]"]);
+        }
+    }["ImageCarousel.useCallback[previous]"], [
+        images.length
+    ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "ImageCarousel.useEffect": ()=>{
-            if (images.length <= 1) return;
+            if (images.length <= 1 || isPaused) return;
             const timer = setInterval(next, interval);
             return ({
                 "ImageCarousel.useEffect": ()=>clearInterval(timer)
             })["ImageCarousel.useEffect"];
         }
     }["ImageCarousel.useEffect"], [
+        isPaused,
         next,
         interval,
         images.length
     ]);
     if (images.length === 0) return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: `relative overflow-hidden ${className}`,
+        className: `group relative overflow-hidden ${className}`,
+        onMouseEnter: ()=>setIsPaused(true),
+        onMouseLeave: ()=>setIsPaused(false),
+        onFocus: ()=>setIsPaused(true),
+        onBlur: ()=>setIsPaused(false),
         children: [
             images.map((img, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                     src: img.src,
@@ -697,33 +712,152 @@ function ImageCarousel({ images, interval = 4000, className = "" }) {
                     className: `absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${index === current ? "opacity-100" : "opacity-0"}`
                 }, img.src, false, {
                     fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                    lineNumber: 31,
+                    lineNumber: 42,
                     columnNumber: 17
                 }, this)),
-            images.length > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-1.5",
-                children: images.map((_, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        onClick: ()=>setCurrent(index),
-                        className: `h-1.5 rounded-full transition-all duration-300 ${index === current ? "w-5 bg-white" : "w-1.5 bg-white/50"}`,
-                        "aria-label": `Ir a imagen ${index + 1}`
-                    }, index, false, {
+            images.length > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-x-0 top-0 flex items-center justify-between p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                type: "button",
+                                onClick: previous,
+                                "aria-label": "Foto anterior",
+                                className: "flex h-9 w-9 items-center justify-center rounded-full border border-white/30 bg-emerald-950/55 text-white shadow-lg backdrop-blur transition hover:bg-emerald-950/80",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    viewBox: "0 0 24 24",
+                                    className: "h-4 w-4",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    strokeWidth: "2",
+                                    "aria-hidden": "true",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        d: "m15 18-6-6 6-6"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/components/ui/ImageCarousel.tsx",
+                                        lineNumber: 64,
+                                        columnNumber: 33
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/app/components/ui/ImageCarousel.tsx",
+                                    lineNumber: 63,
+                                    columnNumber: 29
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/app/components/ui/ImageCarousel.tsx",
+                                lineNumber: 57,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "rounded-full border border-white/20 bg-emerald-950/55 px-3 py-1 text-[10px] font-semibold tracking-[0.18em] text-white/90 backdrop-blur",
+                                children: [
+                                    String(current + 1).padStart(2, "0"),
+                                    " / ",
+                                    String(images.length).padStart(2, "0")
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/components/ui/ImageCarousel.tsx",
+                                lineNumber: 67,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                type: "button",
+                                onClick: next,
+                                "aria-label": "Siguiente foto",
+                                className: "flex h-9 w-9 items-center justify-center rounded-full border border-white/30 bg-emerald-950/55 text-white shadow-lg backdrop-blur transition hover:bg-emerald-950/80",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    viewBox: "0 0 24 24",
+                                    className: "h-4 w-4",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    strokeWidth: "2",
+                                    "aria-hidden": "true",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        d: "m9 18 6-6-6-6"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/components/ui/ImageCarousel.tsx",
+                                        lineNumber: 77,
+                                        columnNumber: 33
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/app/components/ui/ImageCarousel.tsx",
+                                    lineNumber: 76,
+                                    columnNumber: 29
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/app/components/ui/ImageCarousel.tsx",
+                                lineNumber: 70,
+                                columnNumber: 25
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                        lineNumber: 46,
-                        columnNumber: 25
-                    }, this))
+                        lineNumber: 56,
+                        columnNumber: 21
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-x-0 bottom-0 bg-gradient-to-t from-emerald-950/80 via-emerald-950/20 to-transparent px-4 pb-3 pt-12",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex items-end justify-between gap-3",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    "aria-hidden": "true"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/components/ui/ImageCarousel.tsx",
+                                    lineNumber: 84,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex items-center gap-1.5",
+                                    children: images.map((_, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            type: "button",
+                                            onClick: ()=>setCurrent(index),
+                                            "aria-label": `Ir a imagen ${index + 1}`,
+                                            "aria-current": index === current,
+                                            className: `h-1.5 rounded-full transition-all duration-300 ${index === current ? "w-6 bg-amber-300" : "w-1.5 bg-white/55 hover:bg-white"}`
+                                        }, index, false, {
+                                            fileName: "[project]/app/components/ui/ImageCarousel.tsx",
+                                            lineNumber: 87,
+                                            columnNumber: 37
+                                        }, this))
+                                }, void 0, false, {
+                                    fileName: "[project]/app/components/ui/ImageCarousel.tsx",
+                                    lineNumber: 85,
+                                    columnNumber: 29
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/app/components/ui/ImageCarousel.tsx",
+                            lineNumber: 83,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/app/components/ui/ImageCarousel.tsx",
+                        lineNumber: 82,
+                        columnNumber: 21
+                    }, this)
+                ]
+            }, void 0, true),
+            images.length === 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-emerald-950/65 to-transparent"
             }, void 0, false, {
                 fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                lineNumber: 44,
+                lineNumber: 105,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-        lineNumber: 29,
+        lineNumber: 34,
         columnNumber: 9
     }, this);
 }
-_s(ImageCarousel, "W7xpBUcEUSyNtq25njIP2zFzvik=");
+_s(ImageCarousel, "s7tPsoueJsrIzLnZnkj7KtlDDv8=");
 _c = ImageCarousel;
 var _c;
 __turbopack_context__.k.register(_c, "ImageCarousel");

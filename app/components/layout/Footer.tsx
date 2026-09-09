@@ -112,7 +112,7 @@ export function Footer() {
             </footer>
 
             <div
-                className="fixed inset-x-0 bottom-0 z-50 border-t border-emerald-900/20 bg-white/95 backdrop-blur"
+                className="fixed inset-x-0 bottom-0 z-50 hidden border-t border-emerald-900/20 bg-white/95 backdrop-blur sm:block"
                 style={{ paddingBottom: "max(0.5rem, env(safe-area-inset-bottom))" }}
             >
                 <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-1.5 sm:px-6 lg:px-8">

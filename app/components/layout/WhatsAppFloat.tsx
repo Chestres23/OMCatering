@@ -21,7 +21,7 @@ export function WhatsAppFloat() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chatea con nosotros por WhatsApp"
-            className={`fixed bottom-24 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg shadow-green-600/30 transition-all duration-500 hover:scale-110 hover:bg-green-600 hover:shadow-xl hover:shadow-green-600/40 ${
+            className={`fixed bottom-6 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg shadow-green-600/30 transition-all duration-500 hover:scale-110 hover:bg-green-600 hover:shadow-xl hover:shadow-green-600/40 sm:bottom-24 sm:right-6 ${
                 visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
             } ${pulse ? "animate-bounce" : ""}`}
         >
