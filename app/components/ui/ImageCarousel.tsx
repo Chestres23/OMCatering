@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type ImageCarouselProps = {
     images: { src: string; alt: string }[];
@@ -13,6 +13,7 @@ type ImageCarouselProps = {
 export function ImageCarousel({ images, interval = 4000, className = "" }: ImageCarouselProps) {
     const [current, setCurrent] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
+    const touchStartX = useRef<number | null>(null);
 
     const next = useCallback(() => {
         setCurrent((prev) => (prev + 1) % images.length);
@@ -21,6 +22,30 @@ export function ImageCarousel({ images, interval = 4000, className = "" }: Image
     const previous = useCallback(() => {
         setCurrent((prev) => (prev - 1 + images.length) % images.length);
     }, [images.length]);
+
+    function handleTouchStart(event: React.TouchEvent<HTMLDivElement>) {
+        touchStartX.current = event.touches[0]?.clientX ?? null;
+    }
+
+    function handleTouchEnd(event: React.TouchEvent<HTMLDivElement>) {
+        if (touchStartX.current === null) {
+            return;
+        }
+
+        const touchEndX = event.changedTouches[0]?.clientX;
+        const distance = touchEndX === undefined ? 0 : touchEndX - touchStartX.current;
+        touchStartX.current = null;
+
+        if (Math.abs(distance) < 45) {
+            return;
+        }
+
+        if (distance < 0) {
+            next();
+        } else {
+            previous();
+        }
+    }
 
     useEffect(() => {
         if (images.length <= 1 || isPaused) return;
@@ -37,6 +62,8 @@ export function ImageCarousel({ images, interval = 4000, className = "" }: Image
             onMouseLeave={() => setIsPaused(false)}
             onFocus={() => setIsPaused(true)}
             onBlur={() => setIsPaused(false)}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
         >
             {images.map((img, index) => (
                 <Image
