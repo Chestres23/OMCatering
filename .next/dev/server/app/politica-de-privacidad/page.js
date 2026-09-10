@@ -1,5 +1,5 @@
 var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/politica-de-privacidad/page.js")
-R.c("server/chunks/ssr/node_modules_next_dist_13812sd._.js")
+R.c("server/chunks/ssr/node_modules_0_.tedn._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__13fcc7~._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_esm_00xse_0._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_compiled_07ho8ku._.js")

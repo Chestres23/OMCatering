@@ -628,6 +628,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 function ImageCarousel({ images, interval = 4000, className = "" }) {
     const [current, setCurrent] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
     const [isPaused, setIsPaused] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const touchStartX = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const next = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useCallback"])(()=>{
         setCurrent((prev)=>(prev + 1) % images.length);
     }, [
@@ -638,6 +639,25 @@ function ImageCarousel({ images, interval = 4000, className = "" }) {
     }, [
         images.length
     ]);
+    function handleTouchStart(event) {
+        touchStartX.current = event.touches[0]?.clientX ?? null;
+    }
+    function handleTouchEnd(event) {
+        if (touchStartX.current === null) {
+            return;
+        }
+        const touchEndX = event.changedTouches[0]?.clientX;
+        const distance = touchEndX === undefined ? 0 : touchEndX - touchStartX.current;
+        touchStartX.current = null;
+        if (Math.abs(distance) < 45) {
+            return;
+        }
+        if (distance < 0) {
+            next();
+        } else {
+            previous();
+        }
+    }
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (images.length <= 1 || isPaused) return;
         const timer = setInterval(next, interval);
@@ -655,6 +675,8 @@ function ImageCarousel({ images, interval = 4000, className = "" }) {
         onMouseLeave: ()=>setIsPaused(false),
         onFocus: ()=>setIsPaused(true),
         onBlur: ()=>setIsPaused(false),
+        onTouchStart: handleTouchStart,
+        onTouchEnd: handleTouchEnd,
         children: [
             images.map((img, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     src: img.src,
@@ -664,7 +686,7 @@ function ImageCarousel({ images, interval = 4000, className = "" }) {
                     className: `absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ease-in-out ${index === current ? "opacity-100" : "opacity-0"}`
                 }, img.src, false, {
                     fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                    lineNumber: 42,
+                    lineNumber: 69,
                     columnNumber: 17
                 }, this)),
             images.length > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -690,17 +712,17 @@ function ImageCarousel({ images, interval = 4000, className = "" }) {
                                         d: "m15 18-6-6 6-6"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                                        lineNumber: 64,
+                                        lineNumber: 91,
                                         columnNumber: 33
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                                    lineNumber: 63,
+                                    lineNumber: 90,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                                lineNumber: 57,
+                                lineNumber: 84,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -712,7 +734,7 @@ function ImageCarousel({ images, interval = 4000, className = "" }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                                lineNumber: 67,
+                                lineNumber: 94,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -733,23 +755,23 @@ function ImageCarousel({ images, interval = 4000, className = "" }) {
                                         d: "m9 18 6-6-6-6"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                                        lineNumber: 77,
+                                        lineNumber: 104,
                                         columnNumber: 33
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                                    lineNumber: 76,
+                                    lineNumber: 103,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                                lineNumber: 70,
+                                lineNumber: 97,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                        lineNumber: 56,
+                        lineNumber: 83,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -761,7 +783,7 @@ function ImageCarousel({ images, interval = 4000, className = "" }) {
                                     "aria-hidden": "true"
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                                    lineNumber: 84,
+                                    lineNumber: 111,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -774,23 +796,23 @@ function ImageCarousel({ images, interval = 4000, className = "" }) {
                                             className: `h-1.5 rounded-full transition-all duration-300 ${index === current ? "w-6 bg-amber-300" : "w-1.5 bg-white/55 hover:bg-white"}`
                                         }, index, false, {
                                             fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                                            lineNumber: 87,
+                                            lineNumber: 114,
                                             columnNumber: 37
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                                    lineNumber: 85,
+                                    lineNumber: 112,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                            lineNumber: 83,
+                            lineNumber: 110,
                             columnNumber: 25
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                        lineNumber: 82,
+                        lineNumber: 109,
                         columnNumber: 21
                     }, this)
                 ]
@@ -799,13 +821,13 @@ function ImageCarousel({ images, interval = 4000, className = "" }) {
                 className: "absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-emerald-950/65 to-transparent"
             }, void 0, false, {
                 fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-                lineNumber: 105,
+                lineNumber: 132,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/components/ui/ImageCarousel.tsx",
-        lineNumber: 34,
+        lineNumber: 59,
         columnNumber: 9
     }, this);
 }

@@ -99,7 +99,7 @@ export default function Home() {
         <section id="inicio" className="hero-bg relative overflow-hidden pt-[4.5rem] sm:pt-20 lg:pt-[5.5rem]">
           <div className="mx-auto grid min-h-[calc(100svh-5rem)] max-w-6xl items-start gap-6 px-4 pb-28 pt-6 sm:px-6 sm:pb-24 sm:pt-8 lg:grid-cols-2 lg:gap-10 lg:px-8 lg:pt-10">
             <Reveal>
-              <div className="relative mb-3 ml-2 w-fit sm:mb-4 sm:ml-6">
+              <div className="relative mb-1 ml-2 w-fit sm:mb-2 sm:ml-6">
                 <span className="absolute -left- -top-2 h-12 w-12 rounded-full bg-amber-300/35 blur-xl" />
                 <span className="absolute -bottom-2 -right-2 h-14 w-14 rounded-full bg-emerald-200/30 blur-xl" />
                 <div className="relative rounded-full bg-gradient-to-br from-amber-300 via-amber-200 to-white p-[3px] shadow-[0_14px_30px_rgba(0,0,0,0.35)]">
@@ -109,7 +109,7 @@ export default function Home() {
                       alt="Identidad visual de O M Catering"
                       width={300}
                       height={300}
-                      className="h-20 w-20 rounded-full object-cover sm:h-24 sm:w-24 lg:h-28 lg:w-28"
+                      className="h-32 w-32 rounded-full object-cover sm:h-[11.25rem] sm:w-[11.25rem] lg:h-40 lg:w-40"
                     />
                   </div>
                 </div>
@@ -123,10 +123,10 @@ export default function Home() {
               <p className="mt-4 max-w-xl text-base leading-7 text-emerald-50 sm:text-lg">
                 Soluciones de alimentación corporativa para organizaciones que necesitan escala, orden y confianza en cada servicio.
               </p>
-              <p className="font-script mt-3 text-3xl leading-none text-amber-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] sm:text-4xl" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.55), 0 0 40px rgba(0,0,0,0.3)" }}>
+              <p className="font-script mt-2 text-3xl leading-none text-amber-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] sm:text-4xl" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.55), 0 0 40px rgba(0,0,0,0.3)" }}>
                 Mi sazón, mi pasión
               </p>
-              <div className="mt-6 flex flex-wrap gap-3 sm:gap-4">
+              <div className="mt-4 flex flex-wrap gap-3 sm:gap-4">
                 <a
                   href="#contacto"
                   className="rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-emerald-950 transition hover:bg-amber-300 hover:shadow-lg hover:shadow-amber-400/25"
