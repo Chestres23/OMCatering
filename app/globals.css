@@ -3,7 +3,7 @@
 :root {
   --background: #f8fafc;
   --foreground: #0f172a;
-  --hero-image: url("/principal.jpg?v=2");
+  --hero-image: url("/FONDO%20PAGINA%20WEB.jpeg");
 }
 
 @theme inline {
@@ -34,7 +34,7 @@ body {
 }
 
 .hero-bg {
-  background-image: linear-gradient(120deg, rgba(6, 78, 59, 0.62), rgba(6, 78, 59, 0.32)), var(--hero-image);
+  background-image: linear-gradient(120deg, rgba(6, 78, 59, 0.32)), var(--hero-image);
   background-size: cover;
   background-position: center;
 }

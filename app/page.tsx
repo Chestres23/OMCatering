@@ -109,7 +109,8 @@ export default function Home() {
                       alt="Identidad visual de O M Catering"
                       width={300}
                       height={300}
-                      className="h-32 w-32 rounded-full object-cover sm:h-[11.25rem] sm:w-[11.25rem] lg:h-40 lg:w-40"
+                      className="h-32 w-32 rounded-full object-cover 
+                      sm:w-[11.25rem] lg:h-40 lg:w-40"
                     />
                   </div>
                 </div>
