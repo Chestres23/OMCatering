@@ -99,7 +99,7 @@ export default function Home() {
         <section id="inicio" className="hero-bg relative overflow-hidden pt-[4.5rem] sm:pt-20 lg:pt-[5.5rem]">
           <div className="mx-auto grid min-h-[calc(100svh-5rem)] max-w-6xl items-start gap-6 px-4 pb-28 pt-6 sm:px-6 sm:pb-24 sm:pt-8 lg:grid-cols-2 lg:gap-10 lg:px-8 lg:pt-10">
             <Reveal>
-              <div className="relative ml-2 w-fit sm:ml-5">
+              <div className="relative mx-auto w-fit">
                 <span className="absolute -left- -top-2 h-12 w-12 rounded-full bg-amber-300/35 blur-xl" />
                 <span className="absolute -bottom-2 -right-2 h-14 w-14 rounded-full bg-emerald-200/30 blur-xl" />
                 <div className="relative rounded-full bg-gradient-to-br from-amber-300 via-amber-200 to-white p-[3px] shadow-[0_14px_30px_rgba(0,0,0,0.35)]">
@@ -114,10 +114,10 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <p className="font-script mt-2 text-2xl leading-none text-amber-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] sm:text-3xl" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.55), 0 0 40px rgba(0,0,0,0.3)" }}>
+              <p className="font-script mt-2 text-center text-2xl leading-none text-amber-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] sm:text-3xl" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.55), 0 0 40px rgba(0,0,0,0.3)" }}>
                 Mi sazón, mi pasión
               </p>
-              <p className="mt-4 inline-flex rounded-full bg-white/85 px-4 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-900">
+              <p className="mx-auto mt-4 flex w-fit rounded-full bg-white/85 px-4 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-900">
                 Catering empresarial
               </p>
               <h1 className="mt-4 font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-[3.45rem]">
