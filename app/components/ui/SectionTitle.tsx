@@ -12,7 +12,7 @@ export function SectionTitle({
     tone = "default",
 }: SectionTitleProps) {
     const eyebrowClass =
-        tone === "light" ? "text-amber-300" : "text-emerald-700";
+        tone === "light" ? "text-amber-300" : "text-amber-600";
     const titleClass = tone === "light" ? "text-white" : "text-emerald-950";
     const descriptionClass =
         tone === "light" ? "text-emerald-50/90" : "text-slate-600";

@@ -94,12 +94,12 @@ export default function Home() {
     <>
       <Navbar />
 
-      <main className="bg-slate-50 pb-24 text-slate-900 sm:pb-28 lg:pb-32">
+      <main className="bg-slate-50 text-slate-900">
         {/* ── HERO ── */}
         <section id="inicio" className="hero-bg relative overflow-hidden pt-[4.5rem] sm:pt-20 lg:pt-[5.5rem]">
           <div className="mx-auto grid min-h-[calc(100svh-5rem)] max-w-6xl items-start gap-6 px-4 pb-28 pt-6 sm:px-6 sm:pb-24 sm:pt-8 lg:grid-cols-2 lg:gap-10 lg:px-8 lg:pt-10">
             <Reveal>
-              <div className="relative mb-1 ml-2 w-fit sm:mb-2 sm:ml-6">
+              <div className="relative ml-2 w-fit sm:ml-5">
                 <span className="absolute -left- -top-2 h-12 w-12 rounded-full bg-amber-300/35 blur-xl" />
                 <span className="absolute -bottom-2 -right-2 h-14 w-14 rounded-full bg-emerald-200/30 blur-xl" />
                 <div className="relative rounded-full bg-gradient-to-br from-amber-300 via-amber-200 to-white p-[3px] shadow-[0_14px_30px_rgba(0,0,0,0.35)]">
@@ -109,13 +109,15 @@ export default function Home() {
                       alt="Identidad visual de O M Catering"
                       width={300}
                       height={300}
-                      className="h-32 w-32 rounded-full object-cover 
-                      sm:w-[11.25rem] lg:h-40 lg:w-40"
+                      className="h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28 lg:h-32 lg:w-32"
                     />
                   </div>
                 </div>
               </div>
-              <p className="inline-flex rounded-full bg-white/85 px-4 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-900">
+              <p className="font-script mt-2 text-2xl leading-none text-amber-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] sm:text-3xl" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.55), 0 0 40px rgba(0,0,0,0.3)" }}>
+                Mi sazón, mi pasión
+              </p>
+              <p className="mt-4 inline-flex rounded-full bg-white/85 px-4 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-900">
                 Catering empresarial
               </p>
               <h1 className="mt-4 font-serif text-4xl leading-tight text-white sm:text-5xl lg:text-[3.45rem]">
@@ -123,9 +125,6 @@ export default function Home() {
               </h1>
               <p className="mt-4 max-w-xl text-base leading-7 text-emerald-50 sm:text-lg">
                 Soluciones de alimentación corporativa para organizaciones que necesitan escala, orden y confianza en cada servicio.
-              </p>
-              <p className="font-script mt-2 text-3xl leading-none text-amber-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] sm:text-4xl" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.55), 0 0 40px rgba(0,0,0,0.3)" }}>
-                Mi sazón, mi pasión
               </p>
               <div className="mt-4 flex flex-wrap gap-3 sm:gap-4">
                 <a
@@ -158,11 +157,11 @@ export default function Home() {
         </section>
 
         {/* ── STATS ── */}
-        <section className="border-y border-emerald-900/10 bg-white py-10">
+        <section className="border-y border-emerald-900/10 bg-[linear-gradient(180deg,#ffffff_0%,#f4faf7_100%)] py-10">
           <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 px-4 sm:grid-cols-4 sm:px-6 lg:px-8">
             {stats.map((item, index) => (
-              <Reveal key={item.label} delay={index * 80} className="relative rounded-2xl border border-emerald-100 bg-gradient-to-b from-emerald-50/80 to-white p-5 text-center">
-                <div className="absolute inset-x-0 top-0 mx-auto h-1 w-12 rounded-b-full bg-gradient-to-r from-amber-400 to-amber-300" />
+              <Reveal key={item.label} delay={index * 80} className="relative overflow-hidden rounded-lg border border-emerald-900/10 bg-white p-5 text-center shadow-[0_14px_35px_-28px_rgba(6,78,59,0.8)] transition duration-300 hover:-translate-y-1 hover:border-amber-400/60 hover:shadow-[0_20px_45px_-26px_rgba(6,78,59,0.75)]">
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-800 via-amber-400 to-emerald-800" />
                 <p className="mt-1 bg-gradient-to-br from-emerald-800 to-emerald-950 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl">{item.value}</p>
                 <p className="mt-2 text-sm font-medium text-slate-500">{item.label}</p>
               </Reveal>
@@ -171,57 +170,98 @@ export default function Home() {
         </section>
 
         {/* ── QUIÉNES SOMOS ── */}
-        <section id="quienes-somos" className="bg-white">
+        <section id="quienes-somos" className="relative overflow-hidden bg-white">
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-400/70 to-transparent" />
           <div className={desktopSectionShell}>
             <div className="w-full">
-              <Reveal>
-                  <SectionTitle
-                  eyebrow="Quiénes somos"
-                  title="De emprendimiento local a aliado estratégico de alimentación masiva"
-                  description="Nacimos atendiendo operaciones pequeñas y hoy somos una empresa consolidada, enfocada en mejorar el bienestar de miles de colaboradores a través de una alimentación segura, rica y eficiente."
-                />
+              <Reveal className="max-w-4xl">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">Quiénes somos</p>
+                <h2 className="mt-3 font-serif text-3xl leading-tight text-emerald-950 sm:text-4xl">
+                  Nuestra Evolución: De emprendimiento a aliado estratégico empresarial
+                </h2>
               </Reveal>
 
-              <div className="mt-8 grid gap-8 lg:grid-cols-2">
-                  <Reveal className="space-y-6 rounded-3xl bg-white p-6 shadow-lg shadow-emerald-900/10 sm:p-8">
-              <div>
-                <h3 className="text-lg font-semibold text-emerald-900">Misión</h3>
-                <p className="mt-2 leading-7 text-slate-600">
-                  Proveer alimentación empresarial confiable y nutritiva, elevando la experiencia diaria de cada comensal.
-                </p>
+              <div className="mt-8 grid items-start gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12">
+                <Reveal>
+                  <p className="max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+                    Nacimos con la visión de transformar el servicio de catering y hoy operamos como una empresa sólida y eficiente. Nos especializamos en potenciar el bienestar y la productividad de miles de colaboradores a través de un servicio de alimentación impecable, nutritivo y con calidez.
+                  </p>
+                  <div className="mt-10 border-l-2 border-amber-400 pl-5">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-amber-600">Nuestro enfoque</p>
+                    <ul className="mt-4 grid gap-3 text-sm font-semibold text-emerald-950 sm:grid-cols-2">
+                      {[
+                        "Nutrición que impulsa la productividad",
+                        "Inocuidad en cada proceso",
+                        "Continuidad y puntualidad operativa",
+                        "Menús adaptados a cada equipo",
+                        "Logística ágil y confiable",
+                        "Servicio cercano con calidez",
+                      ].map((item) => (
+                        <li key={item} className="flex items-center gap-2.5">
+                          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-800 text-[11px] text-amber-300" aria-hidden="true">✓</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </Reveal>
+                <Reveal delay={120} className="w-full max-w-sm justify-self-center lg:justify-self-end">
+                  <Image
+                    src="/Colage3.png"
+                    alt="Operación industrial y logística de OM Catering"
+                    width={1238}
+                    height={1157}
+                    className="h-auto w-full"
+                  />
+                </Reveal>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold text-emerald-900">Visión</h3>
-                <p className="mt-2 leading-7 text-slate-600">
-                  Ser la empresa referente en catering corporativo de alto volumen por calidad alimentaria e innovación operacional.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-emerald-900">Valores</h3>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {[
-                    "Calidad",
-                    "Higiene",
-                    "Responsabilidad",
-                    "Puntualidad",
-                  ].map((value) => (
-                    <span key={value} className="rounded-full bg-emerald-100 px-3 py-1 text-sm font-medium text-emerald-800">
-                      {value}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </Reveal>
 
-            <Reveal delay={120} className="overflow-hidden rounded-3xl">
-              <Image
-                src="/colage.jpeg"
-                alt="Collage de operaciones OM Catering: equipo, cocina, distribución y alimentos"
-                width={900}
-                height={700}
-                className="h-full w-full object-cover"
-              />
-            </Reveal>
+              <div className="mt-10 grid gap-5 md:grid-cols-3">
+                <Reveal className="group relative overflow-hidden rounded-lg border border-emerald-900/10 bg-white p-6 shadow-[0_18px_40px_-30px_rgba(6,78,59,0.75)] transition duration-300 hover:-translate-y-1 hover:border-amber-400/60 hover:shadow-[0_24px_50px_-28px_rgba(6,78,59,0.7)]">
+                  <div className="absolute inset-x-0 bottom-0 h-1 bg-emerald-800" />
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg border border-amber-400/35 bg-amber-50 text-amber-600 transition group-hover:bg-emerald-800 group-hover:text-amber-300">
+                    <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth={1.7} aria-hidden="true">
+                      <circle cx="12" cy="12" r="7.5" />
+                      <circle cx="12" cy="12" r="3.5" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5V2m7.5 10H22M12 19.5V22M4.5 12H2m10 0 7-7m0 0v4m0-4h-4" />
+                    </svg>
+                  </div>
+                  <h3 className="font-serif text-xl font-semibold text-emerald-950">Misión</h3>
+                  <p className="mt-3 leading-7 text-slate-600">
+                    Proveer alimentación empresarial confiable y nutritiva, generando una experiencia diaria única en nuestros clientes.
+                  </p>
+                </Reveal>
+                <Reveal delay={80} className="group relative overflow-hidden rounded-lg border border-emerald-900/10 bg-white p-6 shadow-[0_18px_40px_-30px_rgba(6,78,59,0.75)] transition duration-300 hover:-translate-y-1 hover:border-amber-400/60 hover:shadow-[0_24px_50px_-28px_rgba(6,78,59,0.7)]">
+                  <div className="absolute inset-x-0 bottom-0 h-1 bg-emerald-800" />
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg border border-amber-400/35 bg-amber-50 text-amber-600 transition group-hover:bg-emerald-800 group-hover:text-amber-300">
+                    <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth={1.7} aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m4 9 13-5 2 4-13 5-2-4Zm4 3 3 8m5-11 3 7M7 20h8m4-4h3" />
+                      <circle cx="5" cy="10" r="2" />
+                    </svg>
+                  </div>
+                  <h3 className="font-serif text-xl font-semibold text-emerald-950">Visión</h3>
+                  <p className="mt-3 leading-7 text-slate-600">
+                    Ser reconocidos como la empresa referente en catering corporativo de alto volumen por calidad alimentaria, innovación logística y estricta inocuidad.
+                  </p>
+                </Reveal>
+                <Reveal delay={160} className="group relative overflow-hidden rounded-lg border border-emerald-900/10 bg-white p-6 shadow-[0_18px_40px_-30px_rgba(6,78,59,0.75)] transition duration-300 hover:-translate-y-1 hover:border-amber-400/60 hover:shadow-[0_24px_50px_-28px_rgba(6,78,59,0.7)]">
+                  <div className="absolute inset-x-0 bottom-0 h-1 bg-emerald-800" />
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-lg border border-amber-400/35 bg-amber-50 text-amber-600 transition group-hover:bg-emerald-800 group-hover:text-amber-300">
+                    <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth={1.7} aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5.5h6M9.5 3h5l.5 3H9l.5-3ZM7 5h-.5A1.5 1.5 0 0 0 5 6.5v14h14v-14A1.5 1.5 0 0 0 17.5 5H17" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m8 11 1.3 1.3L12 9.5M8 16l1.3 1.3L12 14.5M14 11h2m-2 5h2" />
+                    </svg>
+                  </div>
+                  <h3 className="font-serif text-xl font-semibold text-emerald-950">Valores</h3>
+                  <ul className="mt-3 space-y-2 text-sm font-medium text-slate-600">
+                    {["Calidad total", "Higiene e inocuidad", "Compromiso", "Puntualidad", "Eficiencia logística"].map((value) => (
+                      <li key={value} className="flex items-center gap-2">
+                        <span className="text-amber-500" aria-hidden="true">✓</span>
+                        {value}
+                      </li>
+                    ))}
+                  </ul>
+                </Reveal>
               </div>
             </div>
           </div>
@@ -403,11 +443,11 @@ export default function Home() {
 
         {/* ── UBICACIÓN ── */}
         <section id="ubicacion" className="bg-white">
-          <div className={desktopSectionShell}>
+          <div className="mx-auto max-w-6xl px-4 pb-4 pt-10 sm:px-6 sm:pb-5 sm:pt-12 lg:px-8 lg:pt-14">
             <div className="grid gap-6 md:gap-8 lg:grid-cols-[1fr_1.15fr] lg:items-center">
               <Reveal>
                 <div className="space-y-4 rounded-3xl border border-emerald-900/10 bg-gradient-to-br from-emerald-50 to-white p-5 shadow-lg shadow-emerald-900/10 sm:p-7 lg:p-8">
-                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-700">Ubicación</p>
+                  <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-600">Ubicación</p>
                   <h2 className="font-serif text-2xl leading-tight text-emerald-950 sm:text-3xl lg:text-4xl">
                     Dónde nos puedes encontrar
                   </h2>

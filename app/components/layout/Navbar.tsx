@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import type { MouseEvent } from "react";
 
 const navItems = [
@@ -59,17 +58,9 @@ export function Navbar() {
                     <a
                         href="#inicio"
                         onClick={(event) => handleAnchorClick(event, "#inicio")}
-                        className="flex items-center gap-3"
+                        className="flex items-center"
                     >
-                        <Image
-                            src="/logoFonAm.jpeg"
-                            alt="Logo de O M Catering"
-                            width={56}
-                            height={56}
-                            className="h-10 w-10 rounded-full border border-white/40 object-cover shadow-[0_6px_16px_rgba(0,0,0,0.35)] sm:h-11 sm:w-11"
-                            priority
-                        />
-                        <span className="font-script text-2xl font-semibold italic leading-none tracking-wide text-white sm:text-[1.7rem]">
+                        <span className="font-script text-xl font-semibold italic leading-none tracking-wide text-white sm:text-[1.7rem]">
                             O M Catering
                         </span>
                     </a>
@@ -92,9 +83,9 @@ export function Navbar() {
                         <a
                             href="#contacto"
                             onClick={(event) => handleAnchorClick(event, "#contacto")}
-                            className="rounded-full bg-amber-400 px-4 py-1.5 text-sm font-semibold text-emerald-950 transition hover:bg-amber-300"
+                            className="rounded-full bg-amber-400 px-3 py-1.5 text-xs font-semibold text-emerald-950 transition hover:bg-amber-300 sm:px-4 sm:text-sm"
                         >
-                            Cotizar
+                            Solicitar propuesta
                         </a>
 
                         <details className="relative md:hidden">

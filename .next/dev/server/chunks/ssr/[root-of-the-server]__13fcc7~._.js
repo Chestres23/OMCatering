@@ -15,9 +15,7 @@ __turbopack_context__.s([
     ()=>metadata
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.react-server.js [app-rsc] (ecmascript)");
-;
 ;
 ;
 const metadata = {
@@ -36,7 +34,7 @@ function PrivacyPolicyPage() {
                         "aria-hidden": "true"
                     }, void 0, false, {
                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                        lineNumber: 14,
+                        lineNumber: 13,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -44,7 +42,7 @@ function PrivacyPolicyPage() {
                         "aria-hidden": "true"
                     }, void 0, false, {
                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                        lineNumber: 15,
+                        lineNumber: 14,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -55,30 +53,18 @@ function PrivacyPolicyPage() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                         href: "/",
-                                        className: "inline-flex items-center gap-3 text-sm font-semibold text-white/85 transition hover:text-amber-300",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                                src: "/logoFonAm.jpeg",
-                                                alt: "Logo de O M Catering",
-                                                width: 52,
-                                                height: 52,
-                                                className: "h-11 w-11 rounded-full border border-white/30 object-cover"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                lineNumber: 19,
-                                                columnNumber: 29
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                children: "O M Catering"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                lineNumber: 26,
-                                                columnNumber: 29
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
+                                        className: "inline-flex items-center text-white transition hover:text-amber-300",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "font-script text-xl font-semibold italic leading-none tracking-wide sm:text-[1.7rem]",
+                                            children: "O M Catering"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/politica-de-privacidad/page.tsx",
+                                            lineNumber: 18,
+                                            columnNumber: 29
+                                        }, this)
+                                    }, void 0, false, {
                                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                        lineNumber: 18,
+                                        lineNumber: 17,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -90,20 +76,20 @@ function PrivacyPolicyPage() {
                                                 children: "←"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                lineNumber: 29,
+                                                lineNumber: 23,
                                                 columnNumber: 29
                                             }, this),
                                             "Regresar"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                        lineNumber: 28,
+                                        lineNumber: 22,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                lineNumber: 17,
+                                lineNumber: 16,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -114,7 +100,7 @@ function PrivacyPolicyPage() {
                                         children: "Cuidamos lo que importa"
                                     }, void 0, false, {
                                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                        lineNumber: 34,
+                                        lineNumber: 28,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -122,7 +108,7 @@ function PrivacyPolicyPage() {
                                         children: "Política de Privacidad"
                                     }, void 0, false, {
                                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                        lineNumber: 35,
+                                        lineNumber: 29,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -130,25 +116,25 @@ function PrivacyPolicyPage() {
                                         children: "La confianza también es parte de nuestro servicio. Aquí te contamos cómo protegemos la información que compartes con nosotros."
                                     }, void 0, false, {
                                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                        lineNumber: 36,
+                                        lineNumber: 30,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                lineNumber: 33,
+                                lineNumber: 27,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                        lineNumber: 16,
+                        lineNumber: 15,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                lineNumber: 13,
+                lineNumber: 12,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -168,7 +154,7 @@ function PrivacyPolicyPage() {
                                                 children: "En esta página"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                lineNumber: 47,
+                                                lineNumber: 41,
                                                 columnNumber: 29
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -180,7 +166,7 @@ function PrivacyPolicyPage() {
                                                         children: "Introducción"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                        lineNumber: 49,
+                                                        lineNumber: 43,
                                                         columnNumber: 33
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -189,7 +175,7 @@ function PrivacyPolicyPage() {
                                                         children: "Información de contacto"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                        lineNumber: 50,
+                                                        lineNumber: 44,
                                                         columnNumber: 33
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -198,19 +184,19 @@ function PrivacyPolicyPage() {
                                                         children: "Uso responsable"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                        lineNumber: 51,
+                                                        lineNumber: 45,
                                                         columnNumber: 33
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                lineNumber: 48,
+                                                lineNumber: 42,
                                                 columnNumber: 29
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                        lineNumber: 46,
+                                        lineNumber: 40,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -225,7 +211,7 @@ function PrivacyPolicyPage() {
                                                         children: "Nuestro compromiso"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                        lineNumber: 57,
+                                                        lineNumber: 51,
                                                         columnNumber: 33
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -233,13 +219,13 @@ function PrivacyPolicyPage() {
                                                         children: "En O M Catering respetamos la privacidad de las personas que visitan nuestro sitio web y se ponen en contacto con nosotros."
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                        lineNumber: 58,
+                                                        lineNumber: 52,
                                                         columnNumber: 33
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                lineNumber: 56,
+                                                lineNumber: 50,
                                                 columnNumber: 29
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -254,7 +240,7 @@ function PrivacyPolicyPage() {
                                                             children: "✦"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                            lineNumber: 65,
+                                                            lineNumber: 59,
                                                             columnNumber: 37
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -264,7 +250,7 @@ function PrivacyPolicyPage() {
                                                                     children: "Información de contacto"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                                    lineNumber: 67,
+                                                                    lineNumber: 61,
                                                                     columnNumber: 41
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -272,24 +258,24 @@ function PrivacyPolicyPage() {
                                                                     children: "Los datos que envías mediante el formulario de contacto se utilizan únicamente para responder a tu solicitud y preparar una propuesta de servicio."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                                    lineNumber: 68,
+                                                                    lineNumber: 62,
                                                                     columnNumber: 41
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                            lineNumber: 66,
+                                                            lineNumber: 60,
                                                             columnNumber: 37
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                    lineNumber: 64,
+                                                    lineNumber: 58,
                                                     columnNumber: 33
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                lineNumber: 63,
+                                                lineNumber: 57,
                                                 columnNumber: 29
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -304,7 +290,7 @@ function PrivacyPolicyPage() {
                                                             children: "✓"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                            lineNumber: 77,
+                                                            lineNumber: 71,
                                                             columnNumber: 37
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -314,7 +300,7 @@ function PrivacyPolicyPage() {
                                                                     children: "Uso responsable"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                                    lineNumber: 79,
+                                                                    lineNumber: 73,
                                                                     columnNumber: 41
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -322,24 +308,24 @@ function PrivacyPolicyPage() {
                                                                     children: "No vendemos ni compartimos tus datos personales con terceros, salvo cuando sea necesario para atender tu solicitud o cumplir una obligación legal."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                                    lineNumber: 80,
+                                                                    lineNumber: 74,
                                                                     columnNumber: 41
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                            lineNumber: 78,
+                                                            lineNumber: 72,
                                                             columnNumber: 37
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                    lineNumber: 76,
+                                                    lineNumber: 70,
                                                     columnNumber: 33
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                lineNumber: 75,
+                                                lineNumber: 69,
                                                 columnNumber: 29
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -347,19 +333,19 @@ function PrivacyPolicyPage() {
                                                 children: "Última actualización: 2026"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                lineNumber: 87,
+                                                lineNumber: 81,
                                                 columnNumber: 29
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                        lineNumber: 55,
+                                        lineNumber: 49,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                lineNumber: 45,
+                                lineNumber: 39,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -372,7 +358,7 @@ function PrivacyPolicyPage() {
                                                 children: "¿Tienes alguna pregunta?"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                lineNumber: 95,
+                                                lineNumber: 89,
                                                 columnNumber: 29
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -380,13 +366,13 @@ function PrivacyPolicyPage() {
                                                 children: "Estamos listos para atenderte."
                                             }, void 0, false, {
                                                 fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                                lineNumber: 96,
+                                                lineNumber: 90,
                                                 columnNumber: 29
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                        lineNumber: 94,
+                                        lineNumber: 88,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -395,19 +381,19 @@ function PrivacyPolicyPage() {
                                         children: "Ir a contacto"
                                     }, void 0, false, {
                                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                        lineNumber: 98,
+                                        lineNumber: 92,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                                lineNumber: 93,
+                                lineNumber: 87,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                        lineNumber: 44,
+                        lineNumber: 38,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -418,24 +404,24 @@ function PrivacyPolicyPage() {
                             children: "← Volver a la página principal"
                         }, void 0, false, {
                             fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                            lineNumber: 105,
+                            lineNumber: 99,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                        lineNumber: 104,
+                        lineNumber: 98,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/politica-de-privacidad/page.tsx",
-                lineNumber: 43,
+                lineNumber: 37,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/politica-de-privacidad/page.tsx",
-        lineNumber: 12,
+        lineNumber: 11,
         columnNumber: 9
     }, this);
 }

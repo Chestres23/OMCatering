@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -15,15 +14,10 @@ export default function PrivacyPolicyPage() {
                 <div className="absolute -bottom-40 left-[-5rem] h-80 w-80 rounded-full border-[42px] border-white/5" aria-hidden="true" />
                 <div className="relative mx-auto max-w-5xl">
                     <div className="flex items-center justify-between gap-4">
-                        <Link href="/" className="inline-flex items-center gap-3 text-sm font-semibold text-white/85 transition hover:text-amber-300">
-                            <Image
-                                src="/logoFonAm.jpeg"
-                                alt="Logo de O M Catering"
-                                width={52}
-                                height={52}
-                                className="h-11 w-11 rounded-full border border-white/30 object-cover"
-                            />
-                            <span>O M Catering</span>
+                        <Link href="/" className="inline-flex items-center text-white transition hover:text-amber-300">
+                            <span className="font-script text-xl font-semibold italic leading-none tracking-wide sm:text-[1.7rem]">
+                                O M Catering
+                            </span>
                         </Link>
                         <Link href="/" className="inline-flex items-center gap-2 rounded-full border border-white/35 px-4 py-2 text-sm font-semibold text-white transition hover:border-amber-300 hover:bg-white/10 hover:text-amber-300">
                             <span aria-hidden="true">←</span>

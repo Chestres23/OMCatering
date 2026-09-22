@@ -1,23 +1,23 @@
 export const benefits = [
     {
         title: "Calidad nutricional",
-        description: "Menús balanceados y personalizados por tipo de operación, perfil ocupacional y objetivos de bienestar.",
+        description: "Menús variados y personalizados por tipo de operación, perfil ocupacional y objetivos de bienestar.",
     },
     {
-        title: "Cobertura multisitio",
-        description: "Operamos en 7 localidades con procesos estandarizados para asegurar consistencia y tiempos de entrega.",
+        title: "Infraestructura industrial",
+        description: "Procesamiento centralizado en planta propia bajo estrictas normas sanitarias, que garantiza inocuidad y continuidad alimentaria.",
     },
     {
         title: "Escalabilidad operativa",
-        description: "Experiencia atendiendo grandes volúmenes diarios sin perder enfoque en inocuidad y servicio humano.",
+        description: "Experiencia atendiendo grandes volúmenes diarios con una logística ágil, procesos estandarizados y un servicio con calidez humana.",
     },
 ];
 
 export const stats = [
-    { value: "+2800", label: "Comensales atendidos" },
-    { value: "7", label: "Localidades activas" },
-    { value: "99%", label: "Entregas puntuales" },
-    { value: "24/7", label: "Seguimiento operativo" },
+    { value: "+3000", label: "Colaboradores atendidos diariamente" },
+    { value: "100%", label: "Inocuidad alimentaria garantizada" },
+    { value: "1", label: "Planta industrial propia de procesamiento" },
+    { value: "+150", label: "Menús y recetas" },
 ];
 
 export const galleryCarousel = [

@@ -7,9 +7,7 @@ __turbopack_context__.s([
     ()=>Navbar
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 "use client";
-;
 ;
 const navItems = [
     {
@@ -79,32 +77,18 @@ function Navbar() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                         href: "#inicio",
                         onClick: (event)=>handleAnchorClick(event, "#inicio"),
-                        className: "flex items-center gap-3",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                src: "/logoFonAm.jpeg",
-                                alt: "Logo de O M Catering",
-                                width: 56,
-                                height: 56,
-                                className: "h-10 w-10 rounded-full border border-white/40 object-cover shadow-[0_6px_16px_rgba(0,0,0,0.35)] sm:h-11 sm:w-11",
-                                priority: true
-                            }, void 0, false, {
-                                fileName: "[project]/app/components/layout/Navbar.tsx",
-                                lineNumber: 64,
-                                columnNumber: 25
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "font-script text-2xl font-semibold italic leading-none tracking-wide text-white sm:text-[1.7rem]",
-                                children: "O M Catering"
-                            }, void 0, false, {
-                                fileName: "[project]/app/components/layout/Navbar.tsx",
-                                lineNumber: 72,
-                                columnNumber: 25
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                        className: "flex items-center",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: "font-script text-xl font-semibold italic leading-none tracking-wide text-white sm:text-[1.7rem]",
+                            children: "O M Catering"
+                        }, void 0, false, {
+                            fileName: "[project]/app/components/layout/Navbar.tsx",
+                            lineNumber: 63,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
                         fileName: "[project]/app/components/layout/Navbar.tsx",
-                        lineNumber: 59,
+                        lineNumber: 58,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -117,17 +101,17 @@ function Navbar() {
                                     children: item.label
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/layout/Navbar.tsx",
-                                    lineNumber: 80,
+                                    lineNumber: 71,
                                     columnNumber: 33
                                 }, this)
                             }, item.href, false, {
                                 fileName: "[project]/app/components/layout/Navbar.tsx",
-                                lineNumber: 79,
+                                lineNumber: 70,
                                 columnNumber: 29
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/components/layout/Navbar.tsx",
-                        lineNumber: 77,
+                        lineNumber: 68,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -136,11 +120,11 @@ function Navbar() {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                 href: "#contacto",
                                 onClick: (event)=>handleAnchorClick(event, "#contacto"),
-                                className: "rounded-full bg-amber-400 px-4 py-1.5 text-sm font-semibold text-emerald-950 transition hover:bg-amber-300",
-                                children: "Cotizar"
+                                className: "rounded-full bg-amber-400 px-3 py-1.5 text-xs font-semibold text-emerald-950 transition hover:bg-amber-300 sm:px-4 sm:text-sm",
+                                children: "Solicitar propuesta"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/layout/Navbar.tsx",
-                                lineNumber: 92,
+                                lineNumber: 83,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("details", {
@@ -151,7 +135,7 @@ function Navbar() {
                                         children: "Menú"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/layout/Navbar.tsx",
-                                        lineNumber: 101,
+                                        lineNumber: 92,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -163,40 +147,40 @@ function Navbar() {
                                                 children: item.label
                                             }, item.href, false, {
                                                 fileName: "[project]/app/components/layout/Navbar.tsx",
-                                                lineNumber: 106,
+                                                lineNumber: 97,
                                                 columnNumber: 37
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/layout/Navbar.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 95,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/layout/Navbar.tsx",
-                                lineNumber: 100,
+                                lineNumber: 91,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/components/layout/Navbar.tsx",
-                        lineNumber: 91,
+                        lineNumber: 82,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/layout/Navbar.tsx",
-                lineNumber: 58,
+                lineNumber: 57,
                 columnNumber: 17
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/components/layout/Navbar.tsx",
-            lineNumber: 57,
+            lineNumber: 56,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/components/layout/Navbar.tsx",
-        lineNumber: 56,
+        lineNumber: 55,
         columnNumber: 9
     }, this);
 }
