@@ -95,3 +95,46 @@ summary:focus-visible {
   outline: 3px solid #fbbf24;
   outline-offset: 3px;
 }
+
+.privacy-modal[open] {
+  animation: privacy-modal-in 320ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.privacy-modal[open]::backdrop {
+  animation: privacy-backdrop-in 320ms ease both;
+}
+
+.privacy-modal[data-closing="true"] {
+  animation: privacy-modal-out 220ms ease-in both;
+}
+
+.privacy-modal[data-closing="true"]::backdrop {
+  animation: privacy-backdrop-out 220ms ease-in both;
+}
+
+@keyframes privacy-modal-in {
+  from { opacity: 0; transform: translateY(24px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes privacy-modal-out {
+  from { opacity: 1; transform: translateY(0) scale(1); }
+  to { opacity: 0; transform: translateY(16px) scale(0.98); }
+}
+
+@keyframes privacy-backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes privacy-backdrop-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .privacy-modal[open],
+  .privacy-modal[open]::backdrop {
+    animation-duration: 0.01ms;
+  }
+}
