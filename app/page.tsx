@@ -1,3 +1,4 @@
+import { BrandLogo } from "./components/ui/BrandLogo";
 import Image from "next/image";
 import { Footer } from "./components/layout/Footer";
 import { Navbar } from "./components/layout/Navbar";
@@ -99,24 +100,7 @@ export default function Home() {
         <section id="inicio" className="hero-bg relative overflow-hidden pt-[4.5rem] sm:pt-20 lg:pt-[5.5rem]">
           <div className="mx-auto grid min-h-[calc(100svh-5rem)] max-w-6xl items-start gap-6 px-4 pb-28 pt-6 sm:px-6 sm:pb-24 sm:pt-8 lg:grid-cols-2 lg:gap-10 lg:px-8 lg:pt-10">
             <Reveal>
-              <div className="relative mx-auto w-fit">
-                <span className="absolute -left- -top-2 h-12 w-12 rounded-full bg-amber-300/35 blur-xl" />
-                <span className="absolute -bottom-2 -right-2 h-14 w-14 rounded-full bg-emerald-200/30 blur-xl" />
-                <div className="relative rounded-full bg-gradient-to-br from-amber-300 via-amber-200 to-white p-[3px] shadow-[0_14px_30px_rgba(0,0,0,0.35)]">
-                  <div className="rounded-full bg-emerald-950/35 p-2 backdrop-blur">
-                    <Image
-                      src="/logo.jpeg"
-                      alt="Identidad visual de O M Catering"
-                      width={300}
-                      height={300}
-                      className="h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28 lg:h-32 lg:w-32"
-                    />
-                  </div>
-                </div>
-              </div>
-              <p className="font-script mt-2 text-center text-2xl leading-none text-amber-200 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] sm:text-3xl" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.55), 0 0 40px rgba(0,0,0,0.3)" }}>
-                Mi sazón, mi pasión
-              </p>
+              <BrandLogo />
               <p className="mx-auto mt-4 flex w-fit rounded-full bg-white/85 px-4 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-900">
                 Catering empresarial
               </p>
@@ -131,7 +115,7 @@ export default function Home() {
                   href="#contacto"
                   className="rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-emerald-950 transition hover:bg-amber-300 hover:shadow-lg hover:shadow-amber-400/25"
                 >
-                  Solicitar propuesta
+                  Cotizar
                 </a>
                 <a
                   href="#servicios"
@@ -207,7 +191,7 @@ export default function Home() {
                 </Reveal>
                 <Reveal delay={120} className="w-full max-w-sm justify-self-center lg:justify-self-end">
                   <Image
-                    src="/Colage3.png"
+                    src="/colage.jpeg"
                     alt="Operación industrial y logística de OM Catering"
                     width={1238}
                     height={1157}
@@ -254,7 +238,7 @@ export default function Home() {
                   </div>
                   <h3 className="font-serif text-xl font-semibold text-emerald-950">Valores</h3>
                   <ul className="mt-3 space-y-2 text-sm font-medium text-slate-600">
-                    {["Calidad total", "Higiene e inocuidad", "Compromiso", "Puntualidad", "Eficiencia logística"].map((value) => (
+                    {["Calidad", "Higiene e inocuidad", "Compromiso", "Puntualidad", "Eficiencia logística"].map((value) => (
                       <li key={value} className="flex items-center gap-2">
                         <span className="text-amber-500" aria-hidden="true">✓</span>
                         {value}

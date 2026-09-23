@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { BrandLogo } from "../ui/BrandLogo";
+import { PrivacyPolicyModal } from "../ui/PrivacyPolicyModal";
 
 const socialLinks = [
     {
@@ -45,13 +46,7 @@ export function Footer() {
             <footer className="border-t border-emerald-900/10 bg-emerald-950 pb-28 pt-8 text-white sm:pb-24">
                 <div className="mx-auto grid max-w-6xl items-start gap-10 px-4 sm:px-6 lg:grid-cols-[300px_1fr] lg:gap-12 lg:px-8">
                     <div className="flex justify-center lg:justify-start">
-                        <Image
-                            src="/logoFonAm.jpeg"
-                            alt="Logo de O M Catering"
-                            width={360}
-                            height={360}
-                            className="h-40 w-40 rounded-full border border-white/25 object-cover shadow-[0_8px_22px_rgba(0,0,0,0.3)] sm:h-60 sm:w-60"
-                        />
+                        <BrandLogo />
                     </div>
 
                     <div className="space-y-6">
@@ -59,9 +54,6 @@ export function Footer() {
                             <p className="text-xl font-semibold tracking-wide text-white">O M Catering Empresarial</p>
                             <p className="max-w-2xl text-sm leading-7 text-white/75">
                                 Soluciones de alimentación masiva con foco en inocuidad, puntualidad y bienestar laboral.
-                            </p>
-                            <p className="font-script text-3xl leading-none text-amber-200">
-                                Mi sazón, mi pasión
                             </p>
                         </div>
 
@@ -106,7 +98,7 @@ export function Footer() {
 
                 <p className="mx-auto mt-6 max-w-6xl border-t border-white/10 px-4 pt-4 text-center text-xs leading-6 text-white/55 sm:px-6 lg:px-8">
                     O M Catering® Todos los Derechos Reservados 2026 |{" "}
-                    <a href="/politica-de-privacidad" className="transition hover:text-white">Política de Privacidad</a>{" "}|{" "}
+                    <PrivacyPolicyModal />{" "}|{" "}
                     <a href="mailto:christianvasconez_2016@hotmail.com" className="transition hover:text-white">Desarrollado por Chestres</a>
                 </p>
             </footer>

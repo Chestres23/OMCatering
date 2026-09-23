@@ -85,7 +85,7 @@ export function Navbar() {
                             onClick={(event) => handleAnchorClick(event, "#contacto")}
                             className="rounded-full bg-amber-400 px-3 py-1.5 text-xs font-semibold text-emerald-950 transition hover:bg-amber-300 sm:px-4 sm:text-sm"
                         >
-                            Solicitar propuesta
+                            Cotizar
                         </a>
 
                         <details className="relative md:hidden">

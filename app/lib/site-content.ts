@@ -16,8 +16,8 @@ export const benefits = [
 export const stats = [
     { value: "+3000", label: "Colaboradores atendidos diariamente" },
     { value: "100%", label: "Inocuidad alimentaria garantizada" },
-    { value: "1", label: "Planta industrial propia de procesamiento" },
     { value: "+150", label: "Menús y recetas" },
+    { value: "1", label: "Planta industrial propia de procesamiento" },
 ];
 
 export const galleryCarousel = [

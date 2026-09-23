@@ -466,6 +466,7 @@
     --ease-in-out: cubic-bezier(.4, 0, .2, 1);
     --animate-spin: spin 1s linear infinite;
     --animate-bounce: bounce 1s infinite;
+    --blur-sm: 8px;
     --blur-xl: 24px;
     --default-transition-duration: .15s;
     --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
@@ -865,6 +866,10 @@
     z-index: 50;
   }
 
+  .m-auto {
+    margin: auto;
+  }
+
   .mx-auto {
     margin-inline: auto;
   }
@@ -1049,6 +1054,10 @@
     height: 1px;
   }
 
+  .max-h-\[90dvh\] {
+    max-height: 90dvh;
+  }
+
   .min-h-\[12rem\] {
     min-height: 12rem;
   }
@@ -1127,6 +1136,10 @@
 
   .w-80 {
     width: calc(var(--spacing) * 80);
+  }
+
+  .w-\[calc\(100\%-2rem\)\] {
+    width: calc(100% - 2rem);
   }
 
   .w-fit {
@@ -1318,6 +1331,14 @@
     overflow: hidden;
   }
 
+  .overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .overscroll-contain {
+    overscroll-behavior: contain;
+  }
+
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -1354,6 +1375,11 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+
+  .border-0 {
+    border-style: var(--tw-border-style);
+    border-width: 0;
   }
 
   .border-\[32px\] {
@@ -1986,6 +2012,10 @@
     object-fit: cover;
   }
 
+  .p-0 {
+    padding: calc(var(--spacing) * 0);
+  }
+
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
@@ -2124,6 +2154,10 @@
 
   .text-center {
     text-align: center;
+  }
+
+  .text-left {
+    text-align: left;
   }
 
   .font-script {
@@ -2697,6 +2731,22 @@
     .group-hover\:opacity-100:is(:where(.group):hover *) {
       opacity: 1;
     }
+  }
+
+  .backdrop\:bg-emerald-950\/75::backdrop {
+    background-color: #002c22bf;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .backdrop\:bg-emerald-950\/75::backdrop {
+      background-color: color-mix(in oklab, var(--color-emerald-950) 75%, transparent);
+    }
+  }
+
+  .backdrop\:backdrop-blur-sm::backdrop {
+    --tw-backdrop-blur: blur(var(--blur-sm));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );
+    backdrop-filter: var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );
   }
 
   @media (hover: hover) {
@@ -3445,7 +3495,7 @@
 :root {
   --background: #f8fafc;
   --foreground: #0f172a;
-  --hero-image: url("/FONDO%20PAGINA%20WEB.jpeg");
+  --hero-image: url("/FONDO%20PAGINA%20WEB.png");
 }
 
 * {
